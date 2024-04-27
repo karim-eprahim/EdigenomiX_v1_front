@@ -1,0 +1,1373 @@
+<template>
+  <div class="home">
+    <div class="">
+      <!-- slider show servieces  -->
+      <div id="service-banner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="../assets/banner/banner-b-peridot-academic-editing-services-1.webp"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption">
+              <h2 class="mb-3">Increase your Acceptance Chances by 24%</h2>
+              <p>
+                From soil to space, our team of subject experts help finalize
+                your manuscript to get published in high-impact journals
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="../assets/banner/banner-b-peridot-academic-editing-services-2.webp"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption">
+              <h2 class="mb-3">
+                Trusted by Leading Publishers, Societies, Universities and Labs
+              </h2>
+              <p>
+                4 of the top 5 global publishers choose Editage as their author
+                services partner
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="../assets/banner/banner-b-peridot-academic-editing-services-3.webp"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption">
+              <h2 class="mb-3">
+                21+ Years of Helping Researchers Get Published
+              </h2>
+              <p>
+                Our Publication Support Services are rated excellent with a
+                Trustpilot score of 4.7/5
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img
+              src="../assets/banner/banner-b-peridot-academic-editing-services-4.webp"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption">
+              <h2 class="mb-3">
+                Journey from Manuscript Finalization to Creating Research Impact
+              </h2>
+              <p>
+                Get the attention your work deserves from peers, media, and
+                funders with our Research Promotion Services
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../assets/banner/banner-b-peridot-academic-editing-services-5.webp"
+              class="d-block w-100"
+              alt=""
+            />
+            <div class="carousel-caption">
+              <h2 class="mb-3">
+                Are you a Bill & Melinda Gates Foundation grantee?
+              </h2>
+              <p>
+                Explore our services for Enterics, Diagnostics, Genomics &
+                Epidemiology team grantees of the foundation. Click to know more
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#service-banner"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon rounded-circle shadow bg-white"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#service-banner"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon rounded-circle shadow bg-white"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- show  -->
+      <div
+        class="container show py-4 d-flex flex-column flex-md-row justify-content-around align-items-center"
+      >
+        <div class="order-2 order-sm-1">
+          <div>
+            <h3 class="text-center fs-4 mb-3">
+              <span class="d-block fs-3">Welcome to EdigenomiX Scientific</span
+              >Your Trusted Partner in Advanced Scientific Solutions.
+            </h3>
+            <p class="text-center mb-0">
+              At EdigenomiX Scientific, we offer an array of premium scientific
+            </p>
+            <p class="text-center">
+              services designed to propel your research and scholarly endeavors
+              to new heights.
+            </p>
+            <div class="d-flex justify-content-center align-items-center">
+              <router-link
+                :to="{ name: 'Services' }"
+                class="btn btn-purple rounded-pill p-3 px-5"
+                >Explore Our Services</router-link
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="for-video order-1 order-sm-2">
+          <div class="w-100 video">
+            <video autoplay loop class="w-100 video-img rounded">
+              <source
+                src="../assets/video.mp4"
+                type="video/mp4"
+                class="w-100 h-100"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- about  -->
+      <div class="about bg-purple">
+        <div class="container">
+          <div class="text-center py-3 pt-4">
+            <h3>Trusted by 1600+ partners</h3>
+            <p>
+              Including 40+ Journals & Publishers, 500+ Universities and 1,100
+              Societies
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="mx-2 p-3 about-info text-white text-center rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z"
+                  />
+                </svg>
+                <h4>123</h4>
+                <p>Projects</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="mx-2 p-3 about-info text-white text-center rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-file-earmark-post"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"
+                  />
+                  <path
+                    d="M4 6.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 0 1H4.5a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+                <h4>123</h4>
+                <p>Article</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="mx-2 p-3 about-info text-white text-center rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-people-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+                  />
+                </svg>
+                <h4>123</h4>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="mx-2 p-3 about-info text-white text-center rounded">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                  />
+                </svg>
+                <h4>123</h4>
+                <p>Employees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- services -->
+      <div class="container pt-5">
+        <div class="d-flex justify-content-between justify-content-xxl-around align-items-center">
+          <h2 class="fs-md-1 m-0">Explore Our Services</h2>
+          <router-link
+            :to="{ name: 'Services' }"
+            class="btn btn-purple small-btn"
+            type="button"
+          >
+            All Services <i class="fa-sharp fa-solid fa-right-long"></i>
+          </router-link>
+        </div>
+      </div>
+
+      <Services></Services>
+
+
+      <!-- team  -->
+      <team></team>
+
+      <!-- Get Offer  -->
+      <div class="about bg-pearl text-light py-3">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-2 col-sm-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="33"
+                fill="gold"
+                class="bi bi-stopwatch-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584l.013-.012.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354-.012.012A6.97 6.97 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0"
+                />
+              </svg>
+            </div>
+            <div class="col-10 col-sm">
+              <div>
+                <h3>8 Hour Express delivery Working on a strict deadline?</h3>
+                <p class="mb-0">
+                  Get your documents edited in as fast as 8 hours
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-sm">
+              <button class="btn btn-light mx-auto d-block">
+                Get Your Descount
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Published Researchers  -->
+      <div class="published container py-4">
+        <div class="section-title text-center py-4">
+          <h2>Published Researchers endorse Editage and its services</h2>
+        </div>
+        <div
+          id="published-banner"
+          class="carousel slide mx-auto"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner rounded-4">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img
+                src="../assets/banner/banner2/1003w-QHBKwQnsgzs.webp"
+                class=""
+                alt=""
+              />
+              <div class="carousel-published">
+                <p class="mb-3">
+                  Expert polishing is very responsible, not only correcting
+                  grammar and expressions, but also telling you why certain
+                  usages are wrong and how idiomatic expressions should be in
+                  English.
+                </p>
+                <div class="puplish-cont pb-3">
+                  <h6 class="text-secondary">PAPER TITLE</h6>
+                  <h6 class="mb-3 fw-bold">
+                    Histone deacetylase AtSRT2 regulates salt tolerance during
+                    seed germination via repression of vesicle-associated
+                    membrane protein 714
+                  </h6>
+
+                  <h5 class="mb-3 fw-bold">Zhang Shuo</h5>
+                  <div class="row">
+                    <p class="col fs-6 border-end">
+                      Research Field: Malignant Tumors of Lymphoid and
+                      Hematopoietic System
+                    </p>
+                    <p class="col fs-6">
+                      Beijing Tongren Hospital Affiliated to Capital Medical
+                      University
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+              <img
+                src="../assets/banner/banner2/1003w-QHBKwQnsgzs.webp"
+                class=""
+                alt=""
+              />
+              <div class="carousel-published">
+                <p class="mb-3">
+                  Expert polishing is very responsible, not only correcting
+                  grammar and expressions, but also telling you why certain
+                  usages are wrong and how idiomatic expressions should be in
+                  English.
+                </p>
+                <div class="puplish-cont">
+                  <h6 class="text-secondary">PAPER TITLE</h6>
+                  <h6 class="mb-3 fw-bold">
+                    Histone deacetylase AtSRT2 regulates salt tolerance during
+                    seed germination via repression of vesicle-associated
+                    membrane protein 714
+                  </h6>
+
+                  <h5 class="mb-3 fw-bold">Zhang Shuo</h5>
+                  <div class="row">
+                    <p class="col fs-6 border-end">
+                      Research Field: Malignant Tumors of Lymphoid and
+                      Hematopoietic System
+                    </p>
+                    <p class="col fs-6">
+                      Beijing Tongren Hospital Affiliated to Capital Medical
+                      University
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../assets/banner/banner2/1003w-QHBKwQnsgzs.webp"
+                class=""
+                alt=""
+              />
+              <div class="carousel-published">
+                <p class="mb-3">
+                  Expert polishing is very responsible, not only correcting
+                  grammar and expressions, but also telling you why certain
+                  usages are wrong and how idiomatic expressions should be in
+                  English.
+                </p>
+                <div class="puplish-cont">
+                  <h6 class="text-secondary">PAPER TITLE</h6>
+                  <h6 class="mb-3 fw-bold">
+                    Histone deacetylase AtSRT2 regulates salt tolerance during
+                    seed germination via repression of vesicle-associated
+                    membrane protein 714
+                  </h6>
+
+                  <h5 class="mb-3 fw-bold">Zhang Shuo</h5>
+                  <div class="row">
+                    <p class="col fs-6 border-end">
+                      Research Field: Malignant Tumors of Lymphoid and
+                      Hematopoietic System
+                    </p>
+                    <p class="col fs-6">
+                      Beijing Tongren Hospital Affiliated to Capital Medical
+                      University
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#published-banner"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon rounded-circle shadow bg-white"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#published-banner"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon rounded-circle shadow bg-white"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- PROMISE  -->
+      <div class="bg-diamond">
+        <div class="container promise py-4">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <img
+                  style="max-width: 150px"
+                  class="mx-auto rounded-circle"
+                  src="../assets/logo/logophoto.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <div class="card-body d-flex gap-3">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      fill="#8d7677"
+                      class="bi bi-chat-left-dots-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h5 class="card-title fw-bold">24*7 Support Available</h5>
+                    <p class="card-text">
+                      We are working round the clock to ensure your publication
+                      success. We respond to all enquiries within one hour.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <div class="card-body d-flex gap-3">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      fill="#8d7677"
+                      class="bi bi-cash-coin"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"
+                      />
+                      <path
+                        d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"
+                      />
+                      <path
+                        d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"
+                      />
+                      <path
+                        d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h5 class="card-title fw-bold">Money Back Guarantee</h5>
+                    <p class="card-text">
+                      If you are not satisfied with our quality, we will refund
+                      your entire editing fees. No questions asked.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <div class="card-body d-flex gap-3">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      fill="#8d7677"
+                      class="bi bi-clock-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h5 class="card-title fw-bold">Always on time</h5>
+                    <p class="card-text">
+                      If we miss our deadline by even a minute, we offer a full
+                      refund.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <div class="card-body d-flex gap-3">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      fill="#8d7677"
+                      class="bi bi-shield-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"
+                      />
+                      <path
+                        d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h5 class="card-title fw-bold">Enhanced Data Security</h5>
+                    <p class="card-text">
+                      We use ISO/IEC 27001:2013 certified security systems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0">
+                <div class="card-body d-flex gap-3">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="23"
+                      height="23"
+                      fill="#8d7677"
+                      class="bi bi-send-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h5 class="card-title fw-bold">
+                      Unlimited Q&A with experts
+                    </h5>
+                    <p class="card-text">
+                      Get every question about your assignment answered by the
+                      experts who worked on your manuscript.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- process  -->
+      <div class="bg-white">
+        <div class="process container py-4">
+          <div class="section-title text-center py-4">
+            <h2>Our process to help you get published</h2>
+          </div>
+          <div class="process-progress">
+            <div class="form-steps">
+              <!-- First Step -->
+              <div class="form-steps__step form-steps__step--active">
+                <div class="form-steps__step-circle">
+                  <span class="form-steps__step-number"></span>
+                  <span class="form-steps__step-check">&#x2713;</span>
+                </div>
+                <span class="form-step__step-name">Place an order</span>
+              </div>
+              <!-- Second Step -->
+              <div class="form-steps__step form-steps__step--incomplete">
+                <div class="form-steps__step-circle">
+                  <span class="form-steps__step-number"></span>
+                  <span class="form-steps__step-check">&#x2713;</span>
+                </div>
+                <span class="form-step__step-name"
+                  >Our technology kicks in</span
+                >
+              </div>
+              <!-- Thired Step -->
+              <div class="form-steps__step form-steps__step--complete">
+                <div class="form-steps__step-circle">
+                  <span class="form-steps__step-number"></span>
+                  <span class="form-steps__step-check">&#x2713;</span>
+                </div>
+                <span class="form-step__step-name">Experts get on the job</span>
+              </div>
+              <!-- Thired Step -->
+              <div class="form-steps__step form-steps__step--last">
+                <div class="form-steps__step-circle">
+                  <span class="form-steps__step-number"></span>
+                  <span class="form-steps__step-check">&#x2713;</span>
+                </div>
+                <span class="form-step__step-name"
+                  >payment & download document</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center my-3">
+            <router-link
+              :to="{ name: 'Services' }"
+              class="btn btn-purple rounded-pill py-2 px-5"
+              >Get Quote</router-link
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- subject  -->
+      <div class="bg-diamond">
+        <div class="container subject py-4">
+          <div class="section-title text-center py-4">
+            <h2>
+              We cover <span class="text-purple">1600+</span> Subject Areas
+              across 5 major domains
+            </h2>
+          </div>
+          <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
+            <div class="col">
+              <div class="card bg-diamond border-0 h-100">
+                <img
+                  src="../assets/subject/Sciences.svg"
+                  class="card-img-top mx-auto"
+                  style="width: 150px; height: 150px"
+                />
+                <div class="card-body pt-0 text-center">
+                  <h5 class="card-title fw-bold fs-sm-6" style="color: #ba68c8">
+                    Medicine Sciences
+                  </h5>
+                  <p class="card-text m-0 p-0">
+                    <strong>200+</strong> Subjects
+                  </p>
+                  <p class="card-text m-0 p-0"><strong>800+</strong> Experts</p>
+                  <p class="card-text m-0 p-0">
+                    <strong>470,000+</strong> Papers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0 h-100">
+                <img
+                  src="../assets/subject/Biologist-bro.svg"
+                  class="card-img-top mx-auto"
+                  style="width: 150px; height: 150px"
+                />
+                <div class="card-body pt-0 text-center">
+                  <h5 class="card-title fw-bold fs-sm-6" style="color: #59d07b">
+                    Life Sciences
+                  </h5>
+                  <p class="card-text m-0 p-0">
+                    <strong>100+</strong> Subjects
+                  </p>
+                  <p class="card-text m-0 p-0"><strong>800+</strong> Experts</p>
+                  <p class="card-text m-0 p-0">
+                    <strong>330,000+</strong> Papers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0 h-100">
+                <img
+                  src="../assets/subject/Engineering.svg"
+                  class="card-img-top mx-auto"
+                  style="width: 150px; height: 150px"
+                />
+                <div class="card-body pt-0 text-center">
+                  <h5 class="card-title fw-bold fs-sm-6" style="color: #469bca">
+                    Physical Engineering
+                  </h5>
+                  <p class="card-text m-0 p-0">
+                    <strong>250+</strong> Subjects
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>1000+</strong> Experts
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>670,000+</strong> Papers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0 h-100">
+                <img
+                  src="../assets/subject/Social.svg"
+                  class="card-img-top mx-auto"
+                  style="width: 150px; height: 150px"
+                />
+                <div class="card-body pt-0 text-center">
+                  <h5 class="card-title fw-bold fs-sm-6" style="color: #cc9e33">
+                    Social Sciences
+                  </h5>
+                  <p class="card-text m-0 p-0">
+                    <strong>800+</strong> Subjects
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>1000+</strong> Experts
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>300,000+</strong> Papers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card bg-diamond border-0 h-100">
+                <img
+                  src="../assets/subject/Business.svg"
+                  class="card-img-top mx-auto"
+                  style="width: 150px"
+                />
+                <div class="card-body pt-0 text-center">
+                  <h5 class="card-title fw-bold fs-sm-6" style="color: #e96060">
+                    Business & Economics
+                  </h5>
+                  <p class="card-text m-0 p-0">
+                    <strong>100+</strong> Subjects
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>1000+</strong> Experts
+                  </p>
+                  <p class="card-text m-0 p-0">
+                    <strong>75,000+</strong> Papers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- reviews  -->
+      <div class="reviews bg-white pt-4">
+        <div class="container">
+          <h2 class="head-text text-center fs-3 text-start mb-4">
+            What Clients Say
+          </h2>
+          <swiper
+            :modules="modules"
+            :slides-per-view="2"
+            :space-between="50"
+            navigation
+            :pagination="{ clickable: true }"
+            :scrollbar="{ draggable: true }"
+            :breakpoints="breakpoints"
+            class="pb-5"
+          >
+            <swiper-slide v-for="index in 6" :key="index">
+              <div class="bg-white text-center p-3 rounded-5">
+                <img
+                  class="rounded-circle shadow-1-strong mb-4"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                  alt="avatar"
+                  style="width: 100px"
+                />
+                <h5 class="mb-3">Anna Deynah</h5>
+                <!-- <star-rating
+                  class="justify-content-center mb-2"
+                  :star-size="25"
+                  :increment="0.5"
+                  rating="3.5"
+                  :show-rating="false"
+                  :read-only="true"
+                ></star-rating> -->
+                <p class="text-muted">
+                  <i class="fas fa-quote-left pe-2"></i>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                  eos id officiis hic tenetur quae quaerat ad velit ab hic
+                  tenetur.
+                </p>
+              </div>
+            </swiper-slide>
+            ...
+          </swiper>
+        </div>
+      </div>
+
+      <!-- support  -->
+      <div class="support py-5">
+        <div class="container">
+          <div class="section-title text-center py-4">
+            <h2>Personalized support, local teams</h2>
+          </div>
+          <div>
+            <div class="row row-cols-1 row-cols-sm-2 mt-5">
+              <div class="col mb-3">
+                <div class="card h-100 border-0 support-user">
+                  <img
+                    src="../assets/about/team/julian-wan-WNoLnJo7tS8-unsplash.jpg"
+                    class="card-img-top rounded-circle mx-auto"
+                  />
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Support in your local language</h4>
+                    <p class="card-text">
+                      Get dedicated support in your local language & English
+                      from our team of experienced support professionals based
+                      out of all over world.
+                    </p>
+                    <a href="#" class="card-link btn text-purple text-center"
+                      >Meet Our Support Stars
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-0 mb-2">
+                  <div class="card-body d-flex gap-3">
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="23"
+                        height="23"
+                        fill="#623de2"
+                        class="bi bi-credit-card-2-front-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <h5 class="card-title fw-bold">Easy payment options</h5>
+                      <p class="card-text">
+                        Pay in your local currency or through your preferred
+                        bank. No hidden charges.
+                      </p>
+                      <div class="d-flex w-100">
+                        <img
+                          src="../assets/logo/VISA.svg"
+                          style="width: 50px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/logo/paypal.svg"
+                          style="width: 40px"
+                          alt=""
+                        />
+                        <img
+                          src="../assets/logo/mastercard.svg"
+                          style="width: 40px"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card border-0">
+                  <div class="card-body d-flex gap-3">
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="23"
+                        height="23"
+                        fill="#623de2"
+                        class="bi bi-cash-stack"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+                        />
+                        <path
+                          d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"
+                        />
+                      </svg>
+                    </div>
+
+                    <div>
+                      <h5 class="card-title fw-bold">Local invoice formats</h5>
+                      <p class="card-text">
+                        Customize and download invoices instantly without
+                        sacrificing your research time
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end  -->
+      <div class="end py-4" style="background-color: #dbe3ff">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-sm-9 order-2 order-sm-1 col-12 d-flex justify-content-center"
+            >
+              <div class="section-title text-center py-3">
+                <h2>
+                  Ready to start your publication journey with Editage? Get
+                  Quote
+                </h2>
+                <div
+                  class="d-flex justify-content-center align-items-center my-3"
+                >
+                  <router-link
+                    :to="{ name: 'Services' }"
+                    class="btn btn-purple rounded-pill py-2 px-5"
+                    >Get Quote</router-link
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm-3 col-12 order-sm-2 d-flex justify-content-center"
+            >
+              <img
+                src="../assets/logo/research.png"
+                class=""
+                style="width: 100px; height: 100px"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Services from "@/components/Services.vue";
+import team from "@/components/Team.vue";
+
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Navigation, Autoplay } from "swiper";
+
+import axios from "axios";
+
+export default {
+  name: "HomeView",
+  components: { Services, team, Swiper, SwiperSlide },
+  data() {
+    return {
+      modules: [Pagination, Navigation],
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        990: {
+          slidesPerView: 3,
+        },
+        1600: {
+          slidesPerView: 4,
+        },
+      },
+    };
+  },
+};
+</script>
+
+<style scoped lang="scss">
+.home {
+  #service-banner {
+    .carousel-item {
+      background-color: #e6f4f4;
+      min-height: 300px;
+      img {
+        min-height: 300px;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 0%;
+        top: 1.25rem;
+        left: 10%;
+        width: 40%;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        color: #090909;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='cornflowerblue' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z'/%3e%3c/svg%3e");
+    }
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='cornflowerblue' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/%3e%3c/svg%3e");
+    }
+
+    .carousel-control-next:hover,
+    .carousel-control-prev:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .bg-pearl {
+    background-color: #00084d;
+  }
+  .about {
+    .about-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .show {
+    .for-video {
+      width: 50%;
+      max-width: 570px;
+    }
+  }
+  .reviews {
+    .reviews-content {
+      max-height: 26rem;
+      overflow: auto;
+    }
+  }
+  #published-banner {
+    max-width: 800px;
+    .carousel-item {
+      background-color: #e6f4f4;
+      background-color: floralwhite;
+      background-color: lightyellow;
+      min-height: 400px;
+      img {
+        width: 149px;
+        margin: 2rem 0rem 0 5rem;
+      }
+      .carousel-published {
+        position: absolute;
+        right: 15%;
+        top: 1.25rem;
+        width: 54%;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        color: #090909;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='cornflowerblue' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z'/%3e%3c/svg%3e");
+    }
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='cornflowerblue' viewBox='0 0 16 16'%3e%3cpath d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/%3e%3c/svg%3e");
+    }
+  }
+  .bg-diamond {
+    background-color: #f9f3f6;
+  }
+  .process {
+    .process-progress {
+      // Form steps wrapper
+      .form-steps {
+        width: 100%;
+        clear: both;
+        &:before,
+        &:after {
+          display: table;
+          content: "";
+        }
+        &:after {
+          clear: both;
+        }
+      }
+      // Step wrapper
+      .form-steps__step {
+        width: 25%;
+        float: left;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        // progress line
+        &:after {
+          content: "";
+          background: #8e8cdb;
+          height: 0.2rem;
+          top: 3.5rem;
+          left: 50%;
+          width: 100%;
+          display: block;
+          position: absolute;
+          z-index: 1;
+        }
+
+        // if is the last
+        &--last {
+          &:after {
+            display: none;
+          }
+        }
+        // if is the active (current) step
+        &--active {
+          // change the color of the circle
+          .form-steps__step-circle {
+            background-image: url(https://www.editage.com/assets/images/icons/make-payment-download-document.svg);
+            background-size: contain;
+            border: 1px solid var(--right-purple);
+            color: #fff;
+          }
+        }
+        // if is incompleted
+        &--incomplete {
+          // change the color of the progress bar
+          &:after {
+            background: #8e8cdb;
+          }
+          // change the color of the circle
+          .form-steps__step-circle {
+            background-image: url(https://www.editage.com/assets/images/icons/2-experts-get-on-job.svg);
+            background-size: contain;
+            border: 1px solid var(--right-purple);
+            color: #fff;
+            // when is completed we show the checkmark and hide the number
+            .form-steps__step-number {
+              display: none;
+            }
+            .form-steps__step-check {
+              display: inline-block;
+            }
+          }
+        }
+        // if is completed
+        &--complete {
+          // change the color of the progress bar
+          &:after {
+            background: #8e8cdb;
+          }
+          // change the color of the circle
+          .form-steps__step-circle {
+            background-image: url(https://www.editage.com/assets/images/icons/our-technology-kicks.svg);
+            background-size: contain;
+            border: 1px solid var(--right-purple);
+            color: #fff;
+            // when is completed we show the checkmark and hide the number
+            .form-steps__step-number {
+              display: none;
+            }
+            .form-steps__step-check {
+              display: inline-block;
+            }
+          }
+        }
+
+        &--last {
+          // change the color of the progress bar
+          &:after {
+            background: #8e8cdb;
+          }
+          // change the color of the circle
+          .form-steps__step-circle {
+            background-image: url(https://www.editage.com/assets/images/icons/place-an-order.svg);
+            background-size: contain;
+            border: 1px solid var(--right-purple);
+            color: #fff;
+            // when is completed we show the checkmark and hide the number
+            .form-steps__step-number {
+              display: none;
+            }
+            .form-steps__step-check {
+              display: inline-block;
+            }
+          }
+        }
+      } // End form steps
+
+      // Steps circle
+      .form-steps__step-circle {
+        background: #eee;
+        border: 1px solid var(--right-purple);
+        line-height: 2.4rem;
+        border-radius: 50%;
+        height: 5.5rem;
+        width: 5.5rem;
+        text-align: center;
+        color: #bdbdbd;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
+      }
+
+      // By default we hide the checkmark
+      .form-steps__step-check {
+        display: none;
+      }
+
+      // Steps name
+      .form-step__step-name {
+        margin-top: 0.8rem;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.4rem;
+      }
+    }
+  }
+  .support {
+    .row {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .support-user {
+      .card-img-top {
+        width: 7rem;
+        transform: translate(0, -50%);
+        border: 2px solid var(--right-purple);
+      }
+      .card-body {
+        margin-top: -50px;
+      }
+    }
+  }
+}
+@media (max-width: 787px) {
+  .home {
+    #service-banner {
+      .carousel-item {
+        img {
+          display: none !important;
+        }
+        .carousel-caption {
+          // position: absolute;
+          right: 0%;
+          top: 1.25rem;
+          left: 0%;
+          width: 80%;
+          text-align: center;
+          margin: auto;
+        }
+      }
+    }
+    .show {
+      .for-video {
+        width: 100%;
+      }
+    }
+    .reviews {
+      .reviews-content {
+        max-height: 15rem;
+        overflow: auto;
+      }
+    }
+    #published-banner {
+      .carousel-item {
+        min-height: 530px;
+        img {
+          width: 115px;
+          margin: 1rem 0rem 0 1rem;
+        }
+        .carousel-published {
+          width: 50%;
+          right: 9%;
+          .puplish-cont {
+            display: flex;
+            flex-direction: column;
+            width: 366px;
+            margin-left: -128px;
+          }
+
+          p {
+            margin-top: -15px;
+          }
+        }
+      }
+    }
+    .process {
+      .process-progress {
+        .form-steps__step {
+          // progress line
+          &:after {
+            content: "";
+            top: 2.7rem;
+          }
+        } // End form steps
+        .form-steps__step-circle {
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+        span.form-step__step-name {
+          font-size: 12px;
+          line-height: 1;
+        }
+      }
+    }
+    .subject {
+      .card {
+        .card-title {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 787px) and (max-width: 1200px) {
+  .img-graph {
+    display: none;
+  }
+}
+</style>
