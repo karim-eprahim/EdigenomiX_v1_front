@@ -10,14 +10,10 @@
         <div class="col order-2 order-md-1">
           <div class="w-100">
             <p>
-              EdigenomiX Since was born in 2014 with the aim of making
-              impeccable written English accessible to everyone. We believe
-              language should not be a barrier to anybody’s success.
+              Welcome to EdigenomiX Scientific, where every project starts with a promise of discovery and ends with a stride towards groundbreaking science. Founded on the belief that every researcher deserves top-tier support, we have spent over a decade perfecting our craft in genomics research and academic publishing.
             </p>
             <p>
-              Over the years, our services have expanded beyond English editing
-              and proofreading to include referencing, formatting, and
-              plagiarism checking for students.
+              Our services range from detailed genomics analysis and bioinformatics to expert-level scientific and language editing, proofreading, and manuscript preparation. We ensure that each project not only meets but exceeds the highest academic standards.
             </p>
           </div>
           <div class="mt-3">

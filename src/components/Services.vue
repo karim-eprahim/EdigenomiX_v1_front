@@ -32,7 +32,7 @@
           >
             <div class="row g-3">
               <div
-                class="col-12 col-md-4"
+                class="col-12 col-md-4 serv"
                 v-for="serv in servcat"
                 :key="serv.id"
               >
@@ -41,8 +41,8 @@
                   <div
                     class="card-body d-flex flex-column justify-content-between"
                   >
-                    <div>
-                      <h5 class="card-title fs-3">{{ serv.en_name }}</h5>
+                    <div class="serv-content">
+                      <h5 class="card-title fw-bold">{{ serv.en_name }}</h5>
                       <p class="card-text">{{ serv.en_description }}</p>
                       <!-- Additional service information can be displayed here -->
                     </div>
@@ -127,6 +127,15 @@ export default {
   .nav-link.active {
     background-color: var(--light-purple);
     font-weight: bold;
+  }
+  .serv:nth-child(1) .serv-content h5{
+    color: #a86c66;
+  }
+  .serv:nth-child(2) .serv-content h5{
+    color: #6882da;
+  }
+  .serv:nth-child(3) .serv-content h5{
+    color: #e9c357;
   }
   .readmore {
     transition: 0.4s;

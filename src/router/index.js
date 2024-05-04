@@ -82,6 +82,7 @@ const routes = [
   },
 ];
 
+// the page open to the top 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }
@@ -89,5 +90,15 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
+
+// add the page title
+router.beforeEach((to,from,next)=>{
+  let home = to.name
+  if(home == "Home"){
+    home = ""
+  }
+  document.title = `${process.env.VUE_APP_TITLE}/${home}`
+  next()
+})
 
 export default router;

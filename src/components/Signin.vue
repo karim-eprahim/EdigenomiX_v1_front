@@ -156,7 +156,7 @@ export default {
           );
 
           if (result.status === 200) {
-            console.log(result.data);
+            // console.log(result.data);
             // Save to local storage
             localStorage.setItem("user-info", JSON.stringify(result.data.data));
             // Success: user found

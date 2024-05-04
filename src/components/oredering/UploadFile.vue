@@ -69,7 +69,7 @@
             <!-- End list of prices  -->
           </div>
           <!-- OR  -->
-          <h1 class="OR">OR</h1>
+          <!-- <h1 class="OR">OR</h1> -->
           <!-- set the number of words  -->
           <div class="words-card bg-light shadow p-4 mt-3 rounded" style="display: none;">
             <form
@@ -273,8 +273,8 @@ export default {
           );
   
           if (result.status === 200) {
-            console.log("File uploaded successfully");
-            console.log(result.data.data);
+            // console.log("File uploaded successfully");
+            // console.log(result.data.data);
             this.pricingPlansByFile = result.data.data.service.prices;
             this.numberOfWords = result.data.data.words_count;
             // Additional handling if needed
@@ -290,41 +290,41 @@ export default {
 
     },
     // get the price by the word count
-    async getPriceByWordNum() {
-      const formData = new FormData();
-      // parameters
-      formData.append("service_id", this.servId);
-      formData.append("price_by", "words_number");
-      formData.append("words_number", this.wordNum);
+    // async getPriceByWordNum() {
+    //   const formData = new FormData();
+    //   // parameters
+    //   formData.append("service_id", this.servId);
+    //   formData.append("price_by", "words_number");
+    //   formData.append("words_number", this.wordNum);
 
-      try {
-        const result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/price-list",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-              Authorization: `Bearer ${this.token}`,
-              Accept: "application/json",
-            },
-          }
-        );
+    //   try {
+    //     const result = await axios.post(
+    //       "http://localhost/EdigenomiX-v1/public/api/price-list",
+    //       formData,
+    //       {
+    //         headers: {
+    //           "Content-Type": "multipart/form-data",
+    //           Authorization: `Bearer ${this.token}`,
+    //           Accept: "application/json",
+    //         },
+    //       }
+    //     );
 
-        if (result.status === 200) {
-          console.log("File uploaded successfully");
-          console.log(result.data.data);
-          this.pricingPlansByWordsNum = result.data.data.service.prices;
-          // Additional handling if needed
-        } else {
-          console.error("File upload failed");
-        }
-      } catch (error) {
-        console.error("Error uploading file:", error);
-      }
-    },
+    //     if (result.status === 200) {
+    //       console.log("File uploaded successfully");
+    //       console.log(result.data.data);
+    //       this.pricingPlansByWordsNum = result.data.data.service.prices;
+    //       // Additional handling if needed
+    //     } else {
+    //       console.error("File upload failed");
+    //     }
+    //   } catch (error) {
+    //     console.error("Error uploading file:", error);
+    //   }
+    // },
 
     // do the order 
-    async Order(price,edited_within,words_count){
+    async Order(price,edited_within,words_count,orderDetails){
       const formData = new FormData();
       // parameters
       formData.append("service_id", this.servId);
@@ -345,9 +345,8 @@ export default {
         );
 
         if (result.status === 200) {
-          console.log("price is selected");
-          console.log(result.data.data);
           let job_id = result.data.data.job.id
+          console.log(orderDetails)
           this.$router.push({ name: "CheckOut" ,params: { servId: this.servId ,jobId:job_id }});
           // Additional handling if needed
         } else {

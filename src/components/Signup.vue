@@ -64,6 +64,9 @@
             v$.pass.$errors[0]["$message"]
           }}</span>
         </div>
+        <!-- //error message  -->
+          <span class="text-danger px-1 py-3 d-block" v-if="errorMessage" >{{ errorMessage }}</span>
+
         <div class="mb-3 d-flex justify-content-center">
           <input
             type="submit"
@@ -99,6 +102,7 @@ export default {
       pass: "",
       phone: "",
       email: "",
+      errorMessage:"",
     };
   },
   validations() {
@@ -119,7 +123,7 @@ export default {
     async SignUpNow() {
       this.v$.$validate();
       if (!this.v$.$error) {
-        console.log("v success");
+        // console.log("v success");
         let result = await axios.post(
           "http://localhost/EdigenomiX-v1/public/api/register",
           {
@@ -128,19 +132,25 @@ export default {
             password: this.pass,
             phone: this.phone,
           }
-        );
-        if (result.status == 200) {
-          console.log("add-success");
+        ).then(result =>{
+          this.errorMessage = ""
           // save to localstorage
           localStorage.setItem("user-info", JSON.stringify(result.data.data));
-          console.log(result);
-          console.log(JSON.stringify(result.data));
+          // console.log(JSON.stringify(result.data));
           // success signup and go to home bage
           this.$router.push({ name: "Profile" });
-        } else {
-          console.log("add-faild");
-        }
-      } else [console.log("v failld")];
+
+        }).catch(error=>{
+          let errorData = error.response.data.error
+          if(errorData.email && errorData.phone){
+            this.errorMessage = 'email and phone hase already been token'
+          }else if(errorData.email){
+            this.errorMessage = errorData.email[0]
+          }else if(errorData.phone){
+            this.errorMessage = errorData.phone[0]
+          }
+        })
+      } else {console.log("v failld")};
     },
   },
 };

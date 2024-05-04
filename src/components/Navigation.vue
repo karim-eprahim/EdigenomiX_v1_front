@@ -2,9 +2,12 @@
   <header class="shadow py-2 d-flex">
     <nav class="container justify-content-between align-items-center d-flex">
       <div class="">
-        <router-link class="btn fs-3" to="/">EdigenomiX</router-link>
+        <router-link class="btn fs-3" to="/">
+          <img class="logo" src="../assets/logo/Logo.png" alt="" />
+          EdigenomiX
+        </router-link>
       </div>
-      
+
       <div class="nav-link" v-show="!mobile">
         <ul class="m-0">
           <router-link class="btn" :to="{ name: 'Services' }"
@@ -135,9 +138,26 @@
           <li class="d-flex justify-content-center">
             <router-link
               v-if="!loged"
-              class="px-4 py-2 border rounded-pill log"
+              class="px-4 py-2 border rounded-pill log w-100"
               :to="{ name: 'Signin' }"
-              >Login</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-in-right me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+                />
+              </svg>
+              Login</router-link
             >
             <router-link
               :to="{ name: 'Profile' }"
@@ -154,43 +174,128 @@
             </router-link>
           </li>
           <!-- end profile  -->
-          <li class="nav-item">
+          <li class="nav-item" v-if="loged">
             <router-link
               class="btn w-100 text-start w-100 text-start"
               :to="{ name: 'Profile' }"
-              >Profile</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>
+              Profile</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="btn w-100 text-start w-100 text-start"
               :to="{ name: 'Services' }"
-              >Services</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-journals me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2"
+                />
+                <path
+                  d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0"
+                />
+              </svg>
+              Services</router-link
             >
           </li>
           <li>
             <router-link
               class="btn w-100 text-start w-100 text-start"
               :to="{ name: 'About' }"
-              >About Us</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bookmark me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"
+                />
+              </svg>
+              About Us</router-link
             >
           </li>
           <li>
             <router-link
               class="btn w-100 text-start w-100 text-start"
               :to="{ name: 'Courses' }"
-              >Courses</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-mortarboard me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"
+                />
+                <path
+                  d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"
+                />
+              </svg>
+              Courses</router-link
             >
           </li>
           <li>
             <router-link
               class="btn w-100 text-start"
               :to="{ name: 'Contact Us' }"
-              >Contact Us</router-link
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-telephone me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+              Contact Us</router-link
             >
           </li>
           <li v-if="loged">
-            <a @click="logMeOut()" class="btn text-danger">Logout</a>
+            <a @click="logMeOut()" class="btn text-danger"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-right me-2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+                />
+              </svg>
+              Logout</a
+            >
           </li>
         </ul>
       </div>
@@ -259,6 +364,9 @@ export default {
   transition: 0.3s;
 }
 header {
+  .logo {
+    width: 50px;
+  }
   background-color: var(--white);
   .nav-link .btn {
     font-weight: 500;
@@ -305,10 +413,14 @@ header {
     left: -250px;
     z-index: 1;
     overflow-x: hidden;
-    transition: left 0.5s ease; /* Adjust transition properties */
+    transition: left 0.5s ease;
     a {
       color: var(--black);
       font-size: 20px;
+      transition: 0.4s;
+      &:hover {
+        color: var(--right-purple);
+      }
     }
     .nav-pills .nav-link.active {
       background-color: var(--right-purple);

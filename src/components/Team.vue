@@ -2,7 +2,7 @@
   <div class="top-instructors py-3 pb-5" id="instructors">
     <div class="container">
       <div class="section-title">
-        <h2>A global team of 800 experts covering 1600+ subject areas</h2>
+        <h2 class=" fw-bold">A global team of 800 experts covering 1600+ subject areas</h2>
       </div>
 
       <div class="swiper-comments">
@@ -25,7 +25,7 @@
               />
             </div>
             <div class="team-content">
-              <h2>{{ editor.name }}</h2>
+              <h2 class=" fw-bold">{{ editor.name }}</h2>
               <h3 class="mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

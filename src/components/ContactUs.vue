@@ -2,12 +2,9 @@
   <div class="contact-us py-4">
     <div class="container-fluid py-4">
       <div class="headt container-fluid py-4">
-        <h2 class="head-text display-6 text-center">Contact Us</h2>
+        <h2 class="head-text display-6 text-center fw-bold">Contact Us</h2>
         <p class="text-center mt-4 mb-0 pb-0 w-75 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed fugit,
-          odio, cupiditate necessitatibus tempore sint possimus, aut optio
-          facilis laborum nobis omnis distinctio labore deserunt repudiandae
-          enim. Molestiae, in voluptate!
+          Take the Next Step Ready to elevate your research and achieve new levels of success
         </p>
       </div>
     </div>

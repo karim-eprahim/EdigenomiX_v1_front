@@ -4,14 +4,17 @@
     <div class="service-header" :style="backgroundStyle">
       <div class="mx-4 mx-sm-5 text-white imgcont">
         <h3 class="fw-bold">
-          English Editing and Proofreading Services by expert English Editors
+          {{ serviceData.en_name }}
         </h3>
         <p>
-          Our team of expert English editors, top-journal peer reviewers, and
-          PhD subject specialists pour their expertise into perfecting your
-          manuscript, so that you can focus on getting it published.
+          {{ serviceData.en_description }}
         </p>
-        <button class="btn btn-purple rounded-pill px-5">Get Quote</button>
+        <router-link
+          :to="{ name: 'UploadFile', params: { servId: servId } }"
+          class="btn btn-purple rounded-pill px-5"
+        >
+        Get Quote
+        </router-link>
       </div>
     </div>
 
@@ -22,7 +25,7 @@
       >
         <div class="col order-2 order-md-1">
           <div class="container-fluid py-4">
-            <h2 class="fs-3 text-start">Editing Services</h2>
+            <h2 class="fs-3 text-start">{{ serviceData.en_name }}</h2>
           </div>
           <div class="w-100">
             <p>
@@ -31,7 +34,7 @@
               citations, formatting, references, and more.
             </p>
             <ul class="list-group text-decoration-none list-unstyled">
-              <li class="d-flex justify-content-start align-items-center gap-2">
+              <li class="d-flex justify-content-start align-items-center gap-2" v-for="subTitle in serviceData.titles">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -44,9 +47,9 @@
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
                   />
                 </svg>
-                Correction of all language and grammar errors in the document
+                {{subTitle.en_name}}
               </li>
-              <li class="d-flex justify-content-start align-items-center gap-2">
+              <!-- <li class="d-flex justify-content-start align-items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -76,7 +79,7 @@
                 </svg>
 
                 Your document will be checked by 2 experts
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="mt-3">
@@ -257,27 +260,30 @@ export default {
           slidesPerView: 4,
         },
       },
-      serviceData:[]
+      serviceData: [],
     };
   },
   mounted() {
     this.serviceDetail();
   },
-  methods:{
+  methods: {
     async serviceDetail() {
       let result = await axios.get(
         `http://localhost/EdigenomiX-v1/public/api/service-data/${this.servId}`
       );
       if (result.status == 200) {
-        this.serviceData = result.data.data;
+        this.serviceData = result.data.data.services;
         console.log(this.serviceData);
+        console.log(this.serviceData.image)
       }
     },
   },
   computed: {
     backgroundStyle() {
+      console.log(this.serviceData.image)
       return {
         backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)), url(${require("@/assets/servcont/1585108236158.jpeg")})`,
+        backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)),url(${this.serviceData.image})`,
       };
     },
   },
@@ -291,7 +297,7 @@ export default {
   justify-content: start;
   align-items: center;
 }
-.service-header .imgcont{
+.service-header .imgcont {
   max-width: 44rem;
 }
 .video {

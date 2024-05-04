@@ -30,8 +30,8 @@
           <div class="col-12 col-md-6">
             <div class="photo mt-4 mt-sm-0">
               <img
-                class="intro-img w-100 h-100"
-                src="https://lms.templately.com/wp-content/uploads/2021/07/banner-image-1.png"
+                class="intro-img mw-100 d-block mx-auto"
+                src="../assets/courses/courses_graduation.png"
                 alt=""
               />
               <div class="chip-1 shadow">
@@ -256,30 +256,29 @@
           <div
             class="courses-all row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4 mx-xl-5"
           >
-            <div class="col showc all web">
+            <div class="col showc all web" v-for="course in allCourses">
               <div class="card border-0 p-2 py-3 h-100">
                 <div class="row w-100 pt-2 mx-0 align-items-center">
                   <div class="col">
                     <img
-                      src="../assets/banner/banner2/preview1-135.webp"
+                      :src="course.image"
                       class="card-img-top rounded"
                       alt="..."
                     />
                   </div>
                   <div class="col text-end">
-                    <h3>$49.00</h3>
+                    <h3>{{ course.price }}</h3>
                   </div>
                 </div>
                 <div class="card-body postion-relative mb-4">
                   <p class="text-capitalize fs-4 fw-semibold hints">
-                    Web Development
+                    {{ course.en_name }}
                   </p>
                   <h5 class="card-title text-capitalize">
-                    become a fullstack in few months
+                    {{ course.en_content }}
                   </h5>
                   <p class="card-text">
-                    bult your website easily by yourself content of course HTML
-                    , CSS , JS , PHP ,MYSQL
+                    {{ course.en_description }}
                   </p>
                   <div class="row my-3">
                     <div class="col">
@@ -295,7 +294,7 @@
                           d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z"
                         />
                       </svg>
-                      08 lessons
+                      {{ course.lessons_number }} lessons
                     </div>
                     <div class="col">
                       <svg
@@ -310,7 +309,7 @@
                           d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
                         />
                       </svg>
-                      28 student
+                      {{ course.students_number }} student
                     </div>
                   </div>
                   <!-- modal  -->
@@ -335,7 +334,7 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">
-                            Web Development
+                            {{ course.en_name }}
                           </h5>
                           <button
                             type="button"
@@ -390,7 +389,7 @@
     </div>
 
     <!-- top-institutions  -->
-    <div class="top-institutions grad">
+    <!-- <div class="top-institutions grad">
       <div class="container">
         <div class="start py-5">
           <div class="d-flex justify-content-between align-items-center">
@@ -414,16 +413,36 @@
           </video>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
+
 <script>
+import axios from "axios";
 export default {
+  name: "Services",
   data() {
-    return {};
+    return {
+      allCourses: [],
+    };
+  },
+  mounted() {
+    this.allservices();
+  },
+  methods: {
+    async allservices() {
+      let result = await axios.get(
+        `http://localhost/EdigenomiX-v1/public/api/courses-list`
+      );
+      if (result.status == 200) {
+        this.allCourses = result.data.data.courses;
+        console.log(this.allCourses)
+      }
+    },
   },
 };
 </script>
+
 <style scoped>
 .fs-small {
   font-size: 15px;
@@ -442,7 +461,7 @@ export default {
 }
 .intro .photo .intro-img {
   margin: 0 0 0 -3rem;
-  min-height: 400px;
+  max-height: 600px;
   min-width: 400px;
 }
 .intro .chip-1 {
@@ -456,6 +475,7 @@ export default {
   gap: 0.7rem;
   position: absolute;
   top: 90px;
+  left: 90px;
 }
 .intro .chip-2 {
   width: 300px;
@@ -479,7 +499,7 @@ export default {
   align-items: center;
   gap: 0.7rem;
   position: absolute;
-  right: 10px;
+  right: 40px;
   bottom: 130px;
 }
 
@@ -564,7 +584,7 @@ export default {
 }
 .video-img {
   border-radius: 20px;
-  background-image: url(../assets/videos/video-image.jpg);
+  /* background-image: url(../assets/videos/video-image.jpg); */
   background-size: cover;
   /* max-height: 463px; */
 }
@@ -585,5 +605,9 @@ export default {
     margin: 0 0 0 0rem;
     min-width: 300px;
   }
+  .intro .chip-1 {
+  top: 250px;
+  left: 0px;
+}
 }
 </style>
