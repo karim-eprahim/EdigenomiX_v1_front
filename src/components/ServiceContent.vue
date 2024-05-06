@@ -269,7 +269,7 @@ export default {
   methods: {
     async serviceDetail() {
       let result = await axios.get(
-        `http://localhost/EdigenomiX-v1/public/api/service-data/${this.servId}`
+        `${process.env.VUE_APP_API_URL}/service-data/${this.servId}`
       );
       if (result.status == 200) {
         this.serviceData = result.data.data.services;

@@ -127,7 +127,7 @@
                   />
                 </svg>
                 <div class="card-body">
-                  <h5 class="card-title">Computer Science</h5>
+                  <h5 class="card-title">Biomedical Sciences</h5>
                   <p class="card-text">02 COURSES</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@
                   />
                 </svg>
                 <div class="card-body">
-                  <h5 class="card-title">Data Science</h5>
+                  <h5 class="card-title">Genomics and Genetics</h5>
                   <p class="card-text">06 COURSES</p>
                 </div>
               </div>
@@ -176,7 +176,7 @@
                   />
                 </svg>
                 <div class="card-body">
-                  <h5 class="card-title">Enginnering</h5>
+                  <h5 class="card-title">Bioinformatics</h5>
                   <p class="card-text">06 COURSES</p>
                 </div>
               </div>
@@ -196,48 +196,8 @@
                   />
                 </svg>
                 <div class="card-body">
-                  <h5 class="card-title">User Research</h5>
+                  <h5 class="card-title">Biostatistics</h5>
                   <p class="card-text">02 COURSES</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#e54b7f"
-                  class="bi bi-briefcase subject-icon ms-3 mt-3 fiv"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"
-                  />
-                </svg>
-                <div class="card-body">
-                  <h5 class="card-title">Business Study</h5>
-                  <p class="card-text">00 COURSES</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#358df7"
-                  class="bi bi-lightbulb subject-icon ms-3 mt-3 thir"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"
-                  />
-                </svg>
-                <div class="card-body">
-                  <h5 class="card-title">Psychology</h5>
-                  <p class="card-text">12 COURSES</p>
                 </div>
               </div>
             </div>
@@ -432,7 +392,7 @@ export default {
   methods: {
     async allservices() {
       let result = await axios.get(
-        `http://localhost/EdigenomiX-v1/public/api/courses-list`
+        `${process.env.VUE_APP_API_URL}/courses-list`
       );
       if (result.status == 200) {
         this.allCourses = result.data.data.courses;

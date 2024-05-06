@@ -146,7 +146,7 @@ export default {
       if (!this.v$.$error) {
         try {
           let result = await axios.post(
-            "http://localhost/EdigenomiX-v1/public/api/update-profile",
+            `${process.env.VUE_APP_API_URL}/update-profile`,
             {
               name: this.name,
               email: this.email,
@@ -196,7 +196,7 @@ export default {
       try {
         // Make the API call to change the avatar using axios.post
         let result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/change-avatar",
+          `${process.env.VUE_APP_API_URL}/change-avatar`,
           formData, // Include the FormData object as the second parameter
           {
             headers: {

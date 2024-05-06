@@ -28,7 +28,7 @@
           class=""
           v-for="servcat in allServicesData"
           :key="servcat"
-          v-show="activeTab === servcat[0].category_id"
+          v-show="activeTab == servcat[0].category_id"
           >
             <div class="row g-3">
               <div
@@ -94,7 +94,7 @@ export default {
   methods: {
     async allservices() {
       let result = await axios.get(
-        `http://localhost/EdigenomiX-v1/public/api/categories-list`
+        `${process.env.VUE_APP_API_URL}/categories-list`
       );
       if (result.status == 200) {
         this.allCategories = result.data.data.categories;
@@ -136,6 +136,12 @@ export default {
   }
   .serv:nth-child(3) .serv-content h5{
     color: #e9c357;
+  }
+  .serv:nth-child(4) .serv-content h5{
+    color: #74ff79;
+  }
+  .serv:nth-child(5) .serv-content h5{
+    color: #fd593f;
   }
   .readmore {
     transition: 0.4s;

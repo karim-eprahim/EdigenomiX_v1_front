@@ -148,7 +148,7 @@ export default {
       if (!this.v$.$error) {
         try {
           let result = await axios.post(
-            "http://localhost/EdigenomiX-v1/public/api/login",
+            `${process.env.VUE_APP_API_URL}/login`,
             {
               email: this.email,
               password: this.pass,

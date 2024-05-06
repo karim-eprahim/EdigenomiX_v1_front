@@ -335,7 +335,7 @@ export default {
     async profileDataInfo() {
       try {
         let result = await axios.get(
-          "http://localhost/EdigenomiX-v1/public/api/profile",
+          `${process.env.VUE_APP_API_URL}/profile`,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -363,7 +363,7 @@ export default {
       formData.append("user_id", this.userId);
       try {
         const result = await axios.get(
-          "http://localhost/EdigenomiX-v1/public/api/job-list",
+          `${process.env.VUE_APP_API_URL}/job-list`,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,

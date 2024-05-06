@@ -137,7 +137,7 @@ export default {
   methods: {
     async team() {
       let result = await axios.get(
-        `http://localhost/EdigenomiX-v1/public/api/editors-list`
+        `${process.env.VUE_APP_API_URL}/editors-list`
       );
       if (result.status == 200) {
         this.allteam = result.data.data.editors;

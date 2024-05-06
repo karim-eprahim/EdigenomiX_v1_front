@@ -251,7 +251,7 @@ export default {
       formData.append("job_id", this.jobId);
       try {
         const result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/job-payment",
+          `${process.env.VUE_APP_API_URL}/job-payment`,
           formData,
           {
             headers: {
@@ -281,7 +281,7 @@ export default {
       formData.append("job_id", this.jobId);
       try {
         const result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/job-payment",
+          `${process.env.VUE_APP_API_URL}/job-payment`,
           formData,
           {
             headers: {

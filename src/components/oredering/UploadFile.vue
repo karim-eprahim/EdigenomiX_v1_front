@@ -261,7 +261,7 @@ export default {
         try {
           console.log(this.token);
           const result = await axios.post(
-            "http://localhost/EdigenomiX-v1/public/api/price-list",
+            `${process.env.VUE_APP_API_URL}/price-list`,
             formData,
             {
               headers: {
@@ -334,7 +334,7 @@ export default {
       formData.append("words_count", words_count); // word count
       try {
         const result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/add-job",
+          `${process.env.VUE_APP_API_URL}/add-job`,
           formData,
           {
             headers: {

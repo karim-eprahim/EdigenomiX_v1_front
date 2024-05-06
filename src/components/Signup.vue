@@ -125,7 +125,7 @@ export default {
       if (!this.v$.$error) {
         // console.log("v success");
         let result = await axios.post(
-          "http://localhost/EdigenomiX-v1/public/api/register",
+          `${process.env.VUE_APP_API_URL}/register`,
           {
             name: this.name,
             email: this.email,
