@@ -46,6 +46,7 @@ export default {
       if (userData) {
         this.loged = true;
         this.userInfo = JSON.parse(userData).user;
+        console.log(this.userInfo)
       } else {
         this.loged = false;
       }

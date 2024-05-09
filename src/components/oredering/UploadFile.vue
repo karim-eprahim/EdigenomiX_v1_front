@@ -253,6 +253,7 @@ export default {
     // get the price by the file
     async getPriceByFile() {
       if(this.selectedFile){
+        console.log(this.servId)
       const formData = new FormData();
       formData.append("file", this.selectedFile[0]); // file
       // parameters
@@ -274,7 +275,7 @@ export default {
   
           if (result.status === 200) {
             // console.log("File uploaded successfully");
-            // console.log(result.data.data);
+            console.log(result.data.data);
             this.pricingPlansByFile = result.data.data.service.prices;
             this.numberOfWords = result.data.data.words_count;
             // Additional handling if needed

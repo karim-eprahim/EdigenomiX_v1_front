@@ -142,6 +142,7 @@ export default {
 
         }).catch(error=>{
           let errorData = error.response.data.error
+          console.log(error)
           if(errorData.email && errorData.phone){
             this.errorMessage = 'email and phone hase already been token'
           }else if(errorData.email){

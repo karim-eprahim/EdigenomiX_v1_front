@@ -11,7 +11,9 @@
               alt=""
             />
             <div class="carousel-caption">
-              <h2 class="mb-3 fw-bold">Increase your Acceptance Chances by 24%</h2>
+              <h2 class="mb-3 fw-bold">
+                Increase your Acceptance Chances by 24%
+              </h2>
               <p>
                 From soil to space, our team of subject experts help finalize
                 your manuscript to get published in high-impact journals
@@ -116,7 +118,8 @@
         <div class="order-2 order-sm-1">
           <div>
             <h3 class="text-center fs-4 mb-3">
-              <span class="d-block fs-3 fw-bold">Welcome to EdigenomiX Scientific</span
+              <span class="d-block fs-3 fw-bold"
+                >Welcome to EdigenomiX Scientific</span
               >Your Trusted Partner in Advanced Scientific Solutions.
             </h3>
             <p class="text-center mb-0">
@@ -153,7 +156,7 @@
       <div class="about bg-purple">
         <div class="container">
           <div class="text-center py-3 pt-4">
-            <h3 class=" fw-bold">Trusted by 1600+ partners</h3>
+            <h3 class="fw-bold">Trusted by 1600+ partners</h3>
             <p>
               Including 40+ Journals & Publishers, 500+ Universities and 1,100
               Societies
@@ -282,7 +285,9 @@
             </div>
             <div class="col-10 col-sm">
               <div>
-                <h3 class=" fw-bold">8 Hour Express delivery Working on a strict deadline?</h3>
+                <h3 class="fw-bold">
+                  8 Hour Express delivery Working on a strict deadline?
+                </h3>
                 <p class="mb-0">
                   Get your documents edited in as fast as 8 hours
                 </p>
@@ -403,7 +408,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span> Dr. Mohamed A Soltan
+                    <span class="fw-bold">Researcher:</span> Dr. Mohamed A
+                    Soltan
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -411,8 +417,8 @@
                       Molecular Oncology and Immunotherapy
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Faculty of Pharmacy, Sinai
-                      University
+                      <span class="fw-bold">Institution :</span> Faculty of
+                      Pharmacy, Sinai University
                     </p>
                   </div>
                 </div>
@@ -446,7 +452,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span> Prof. Dr. Sarah Albogami
+                    <span class="fw-bold">Researcher:</span> Prof. Dr. Sarah
+                    Albogami
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -454,8 +461,9 @@
                       Microbiology and Immunology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of Biotechnology,
-                      College of Science, Taif University, Taif, Saudi Arabia
+                      <span class="fw-bold">Institution :</span> Department of
+                      Biotechnology, College of Science, Taif University, Taif,
+                      Saudi Arabia
                     </p>
                   </div>
                 </div>
@@ -489,7 +497,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span> Dr. Mohammed Y Behairy
+                    <span class="fw-bold">Researcher:</span> Dr. Mohammed Y
+                    Behairy
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -497,8 +506,8 @@
                       Genetic Oncology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> : Department of Genetics,
-                      Faculty of Science, Alexandria University
+                      <span class="fw-bold">Institution :</span> : Department of
+                      Genetics, Faculty of Science, Alexandria University
                     </p>
                   </div>
                 </div>
@@ -532,7 +541,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span> Prof. Dr. Waleed K. Abdulsahib
+                    <span class="fw-bold">Researcher:</span> Prof. Dr. Waleed K.
+                    Abdulsahib
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -540,9 +550,9 @@
                       Virology and Immunotherapy
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of pharmacology and
-                      Toxicology, College of Pharmacy, Al- Farahidi University,
-                      Baghdad, Iraq
+                      <span class="fw-bold">Institution :</span> Department of
+                      pharmacology and Toxicology, College of Pharmacy, Al-
+                      Farahidi University, Baghdad, Iraq
                     </p>
                   </div>
                 </div>
@@ -576,7 +586,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span>Dr. Mohammed Y. Behairy
+                    <span class="fw-bold">Researcher:</span>Dr. Mohammed Y.
+                    Behairy
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -584,8 +595,8 @@
                       Molecular Immunology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Faculty of Medicine, Ain Shams
-                      University
+                      <span class="fw-bold">Institution :</span> Faculty of
+                      Medicine, Ain Shams University
                     </p>
                   </div>
                 </div>
@@ -619,7 +630,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span>Prof. Dr. Refaat A. Eid
+                    <span class="fw-bold">Researcher:</span>Prof. Dr. Refaat A.
+                    Eid
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -627,9 +639,9 @@
                       Cardiology and Pathophysiology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of Pathology,
-                      College of Medicine, King Khalid University, Abha, Saudi
-                      Arabia
+                      <span class="fw-bold">Institution :</span> Department of
+                      Pathology, College of Medicine, King Khalid University,
+                      Abha, Saudi Arabia
                     </p>
                   </div>
                 </div>
@@ -665,7 +677,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span>Prof. Dr. Samy M. Eleawa
+                    <span class="fw-bold">Researcher:</span>Prof. Dr. Samy M.
+                    Eleawa
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -673,8 +686,8 @@
                       Nutritional Physiology and Cardiometabolic Health
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of Applied Medical
-                      Sciences, College of Health Sciences
+                      <span class="fw-bold">Institution :</span> Department of
+                      Applied Medical Sciences, College of Health Sciences
                     </p>
                   </div>
                 </div>
@@ -708,7 +721,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span> Prof. Dr. Mohamed Samir Ahmed Zaki
+                    <span class="fw-bold">Researcher:</span> Prof. Dr. Mohamed
+                    Samir Ahmed Zaki
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -716,8 +730,9 @@
                       Cardiovascular Pharmacology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of Anatomy, College
-                      of Medicine, King Khalid University, Abha, Saudi Arabia
+                      <span class="fw-bold">Institution :</span> Department of
+                      Anatomy, College of Medicine, King Khalid University,
+                      Abha, Saudi Arabia
                     </p>
                   </div>
                 </div>
@@ -752,7 +767,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span>Prof. Dr. Samah Alharbi
+                    <span class="fw-bold">Researcher:</span>Prof. Dr. Samah
+                    Alharbi
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -760,9 +776,9 @@
                       Cardiovascular Pharmacology and Toxicology
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span> Department of Physiology,
-                      College of Medicine, Umm Al-Qura University, Mekkah, Saudi
-                      Arabia
+                      <span class="fw-bold">Institution :</span> Department of
+                      Physiology, College of Medicine, Umm Al-Qura University,
+                      Mekkah, Saudi Arabia
                     </p>
                   </div>
                 </div>
@@ -797,7 +813,8 @@
                   </h6>
 
                   <h5 class="mb-3 text-black">
-                    <span class="fw-bold">Researcher:</span>Prof. Dr. Bonglee Kim
+                    <span class="fw-bold">Researcher:</span>Prof. Dr. Bonglee
+                    Kim
                   </h5>
                   <div class="row">
                     <p class="col fs-6 border-end">
@@ -805,9 +822,9 @@
                       Molecular Oncology and Genomics
                     </p>
                     <p class="col fs-6">
-                      <span class="fw-bold">Institution :</span>Department of Pathology, College
-                      of Korean Medicine, Kyung Hee University, Seoul 02447,
-                      Republic of Korea
+                      <span class="fw-bold">Institution :</span>Department of
+                      Pathology, College of Korean Medicine, Kyung Hee
+                      University, Seoul 02447, Republic of Korea
                     </p>
                   </div>
                 </div>
@@ -874,10 +891,11 @@
                   </div>
 
                   <div>
-                    <h5 class="card-title fw-bold">24*7 Support Available</h5>
+                    <h5 class="card-title fw-bold">Reliable and Punctual</h5>
                     <p class="card-text">
-                      We are working round the clock to ensure your publication
-                      success. We respond to all enquiries within one hour.
+                      Commit to deadlines with confidence. We guarantee
+                      punctuality, and if we’re even slightly late, your service
+                      is on us.
                     </p>
                   </div>
                 </div>
@@ -892,30 +910,25 @@
                       width="23"
                       height="23"
                       fill="#8d7677"
-                      class="bi bi-cash-coin"
+                      class="bi bi-eye"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        fill-rule="evenodd"
-                        d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"
+                        d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
                       />
                       <path
-                        d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"
-                      />
-                      <path
-                        d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"
-                      />
-                      <path
-                        d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"
+                        d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
                       />
                     </svg>
                   </div>
 
                   <div>
-                    <h5 class="card-title fw-bold">Money Back Guarantee</h5>
+                    <h5 class="card-title fw-bold">
+                      Expert Insights Unlimited
+                    </h5>
                     <p class="card-text">
-                      If you are not satisfied with our quality, we will refund
-                      your entire editing fees. No questions asked.
+                      Have unlimited access to expert consultations to clarify
+                      any queries you might have throughout your project.
                     </p>
                   </div>
                 </div>
@@ -940,10 +953,10 @@
                   </div>
 
                   <div>
-                    <h5 class="card-title fw-bold">Always on time</h5>
+                    <h5 class="card-title fw-bold">Round-the-Clock Support</h5>
                     <p class="card-text">
-                      If we miss our deadline by even a minute, we offer a full
-                      refund.
+                      Available 24/7 to ensure your project never hits a snag.
+                      Reach out anytime and get real-time assistance.
                     </p>
                   </div>
                 </div>
@@ -971,9 +984,11 @@
                   </div>
 
                   <div>
-                    <h5 class="card-title fw-bold">Enhanced Data Security</h5>
+                    <h5 class="card-title fw-bold">Risk-Free Satisfaction</h5>
                     <p class="card-text">
-                      We use ISO/IEC 27001:2013 certified security systems.
+                      Your satisfaction, guaranteed. If our service doesn’t meet
+                      your standards, you receive a full refund— no questions
+                      asked.
                     </p>
                   </div>
                 </div>
@@ -998,12 +1013,11 @@
                   </div>
 
                   <div>
-                    <h5 class="card-title fw-bold">
-                      Unlimited Q&A with experts
-                    </h5>
+                    <h5 class="card-title fw-bold">Unwavering Data Privacy</h5>
                     <p class="card-text">
-                      Get every question about your assignment answered by the
-                      experts who worked on your manuscript.
+                      We safeguard your information with ISO/IEC 27001:2013
+                      certified security systems, ensuring your data remains
+                      confidential.
                     </p>
                   </div>
                 </div>
@@ -1017,7 +1031,7 @@
       <div class="bg-white">
         <div class="process container py-4">
           <div class="section-title text-center py-4">
-            <h2 class="fw-bold">Our process to help you get published</h2>
+            <h2 class="fw-bold">Streamlined Process for Optimal Results</h2>
           </div>
           <div class="process-progress">
             <div class="form-steps">
@@ -1027,7 +1041,8 @@
                   <span class="form-steps__step-number"></span>
                   <span class="form-steps__step-check">&#x2713;</span>
                 </div>
-                <span class="form-step__step-name">Place an order</span>
+                <span class="form-step__step-name d-block mb-0 pb-0">Submit Your Request</span>
+                <!-- <small>Easily submit your project details</small> -->
               </div>
               <!-- Second Step -->
               <div class="form-steps__step form-steps__step--incomplete">
@@ -1035,9 +1050,8 @@
                   <span class="form-steps__step-number"></span>
                   <span class="form-steps__step-check">&#x2713;</span>
                 </div>
-                <span class="form-step__step-name"
-                  >Our technology kicks in</span
-                >
+                <span class="form-step__step-name d-block mb-0 pb-0">Expert Intervention</span>
+                <!-- <small>Our specialists swiftly engage, bringing expertise to every task.</small> -->
               </div>
               <!-- Thired Step -->
               <div class="form-steps__step form-steps__step--complete">
@@ -1045,7 +1059,8 @@
                   <span class="form-steps__step-number"></span>
                   <span class="form-steps__step-check">&#x2713;</span>
                 </div>
-                <span class="form-step__step-name">Experts get on the job</span>
+                <span class="form-step__step-name d-block mb-0 pb-0"> Secure & Efficient Payment</span>
+                <!-- <small>Complete transactions seamlessly and receive your documents without delay.</small> -->
               </div>
               <!-- Thired Step -->
               <div class="form-steps__step form-steps__step--last">
@@ -1053,9 +1068,8 @@
                   <span class="form-steps__step-number"></span>
                   <span class="form-steps__step-check">&#x2713;</span>
                 </div>
-                <span class="form-step__step-name"
-                  >payment & download document</span
-                >
+                <span class="form-step__step-name d-block mb-0 pb-0">review our service</span>
+                <!-- <small>You can review the service received and give your impression</small> -->
               </div>
             </div>
           </div>
@@ -1074,8 +1088,7 @@
         <div class="container subject py-4">
           <div class="section-title text-center py-4">
             <h2 class="fw-bold">
-              We cover <span class="text-purple">1600+</span> Subject Areas
-              across 5 major domains
+              Broad Expertise Across Diverse Fields
             </h2>
           </div>
           <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
@@ -1088,14 +1101,14 @@
                 />
                 <div class="card-body pt-0 text-center">
                   <h5 class="card-title fw-bold fs-sm-6" style="color: #ba68c8">
-                    Medicine Sciences
+                    Medicine and Health Sciences
                   </h5>
                   <p class="card-text m-0 p-0">
-                    <strong>200+</strong> Subjects
+                    <strong>2000+</strong> topics
                   </p>
-                  <p class="card-text m-0 p-0"><strong>800+</strong> Experts</p>
+                  <p class="card-text m-0 p-0"><strong>800+</strong>specialists</p>
                   <p class="card-text m-0 p-0">
-                    <strong>470,000+</strong> Papers
+                    <strong>4,000+</strong> papers
                   </p>
                 </div>
               </div>
@@ -1109,14 +1122,13 @@
                 />
                 <div class="card-body pt-0 text-center">
                   <h5 class="card-title fw-bold fs-sm-6" style="color: #59d07b">
-                    Life Sciences
+                    Biological and Life Sciences
                   </h5>
                   <p class="card-text m-0 p-0">
-                    <strong>100+</strong> Subjects
+                    <strong>100+</strong> fields
                   </p>
-                  <p class="card-text m-0 p-0"><strong>800+</strong> Experts</p>
                   <p class="card-text m-0 p-0">
-                    <strong>330,000+</strong> Papers
+                    <strong>10,000+</strong> Papers
                   </p>
                 </div>
               </div>
@@ -1130,17 +1142,17 @@
                 />
                 <div class="card-body pt-0 text-center">
                   <h5 class="card-title fw-bold fs-sm-6" style="color: #469bca">
-                    Physical Engineering
+                    Biomedical Sciences
                   </h5>
-                  <p class="card-text m-0 p-0">
-                    <strong>250+</strong> Subjects
-                  </p>
-                  <p class="card-text m-0 p-0">
+                  <small class="card-text m-0 p-0">
+                    Supported by a vast repository of knowledge and experienced professionals.
+                  </small>
+                  <!-- <p class="card-text m-0 p-0">
                     <strong>1000+</strong> Experts
                   </p>
                   <p class="card-text m-0 p-0">
                     <strong>670,000+</strong> Papers
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
@@ -1153,17 +1165,11 @@
                 />
                 <div class="card-body pt-0 text-center">
                   <h5 class="card-title fw-bold fs-sm-6" style="color: #cc9e33">
-                    Social Sciences
+                    Genetics and Genomics
                   </h5>
-                  <p class="card-text m-0 p-0">
-                    <strong>800+</strong> Subjects
-                  </p>
-                  <p class="card-text m-0 p-0">
-                    <strong>1000+</strong> Experts
-                  </p>
-                  <p class="card-text m-0 p-0">
-                    <strong>300,000+</strong> Papers
-                  </p>
+                  <small class="card-text m-0 p-0">
+                    Pioneering research supported by leading scientists and extensive academic resources.
+                  </small>
                 </div>
               </div>
             </div>
@@ -1176,16 +1182,10 @@
                 />
                 <div class="card-body pt-0 text-center">
                   <h5 class="card-title fw-bold fs-sm-6" style="color: #e96060">
-                    Business & Economics
+                    Statistical Analysis
                   </h5>
                   <p class="card-text m-0 p-0">
-                    <strong>100+</strong> Subjects
-                  </p>
-                  <p class="card-text m-0 p-0">
-                    <strong>1000+</strong> Experts
-                  </p>
-                  <p class="card-text m-0 p-0">
-                    <strong>75,000+</strong> Papers
+                    <small>Precision and accuracy in data interpretation facilitated by top-tier statisticians.</small>
                   </p>
                 </div>
               </div>
@@ -1420,8 +1420,9 @@
                 </h6>
                 <p class="text-muted">
                   <i class="fas fa-quote-left pe-2"></i>
-                  Their paraphrasing service helped me avoid plagiarism concerns and improved the originality 
-of my academic writings. Their approach maintains the integrity and strength of the argument.
+                  Their paraphrasing service helped me avoid plagiarism concerns
+                  and improved the originality of my academic writings. Their
+                  approach maintains the integrity and strength of the argument.
                 </p>
               </div>
             </swiper-slide>
@@ -1438,8 +1439,9 @@ of my academic writings. Their approach maintains the integrity and strength of 
                 </h6>
                 <p class="text-muted">
                   <i class="fas fa-quote-left pe-2"></i>
-                  EdigenomiX provided exceptional support in data interpretation, transforming raw data into 
-clear, publishable content. Their expertise in academic writing is evident.
+                  EdigenomiX provided exceptional support in data
+                  interpretation, transforming raw data into clear, publishable
+                  content. Their expertise in academic writing is evident.
                 </p>
               </div>
             </swiper-slide>
@@ -1452,7 +1454,7 @@ clear, publishable content. Their expertise in academic writing is evident.
       <div class="support py-5">
         <div class="container">
           <div class="section-title text-center py-4">
-            <h2 class="fw-bold">Personalized support, local teams</h2>
+            <h2 class="fw-bold">Tailored Support, Globally Local</h2>
           </div>
           <div>
             <div class="row row-cols-1 row-cols-sm-2 mt-5">
@@ -1463,14 +1465,14 @@ clear, publishable content. Their expertise in academic writing is evident.
                     class="card-img-top rounded-circle mx-auto"
                   />
                   <div class="card-body text-center">
-                    <h4 class="card-title fw-bold">Support in your local language</h4>
+                    <h4 class="card-title fw-bold">
+                      Native Language Assistance
+                    </h4>
                     <p class="card-text">
-                      Get dedicated support in your local language & English
-                      from our team of experienced support professionals based
-                      out of all over world.
+                      Get support in your preferred language plus English from our team of worldwide professionals.
                     </p>
-                    <a href="#" class="card-link btn text-purple text-center"
-                      >Meet Our Support Stars
+                    <a href="/services" class="card-link btn text-purple text-center"
+                      >Start with a Quote
                     </a>
                   </div>
                 </div>
@@ -1494,10 +1496,9 @@ clear, publishable content. Their expertise in academic writing is evident.
                     </div>
 
                     <div>
-                      <h5 class="card-title fw-bold">Easy payment options</h5>
+                      <h5 class="card-title fw-bold">Flexible Payment Options</h5>
                       <p class="card-text">
-                        Pay in your local currency or through your preferred
-                        bank. No hidden charges.
+                        Transparent, straightforward transactions with no hidden costs, available in local currency.
                       </p>
                       <div class="d-flex w-100">
                         <img
@@ -1540,10 +1541,9 @@ clear, publishable content. Their expertise in academic writing is evident.
                     </div>
 
                     <div>
-                      <h5 class="card-title fw-bold">Local invoice formats</h5>
+                      <h5 class="card-title fw-bold">Localized Invoicing</h5>
                       <p class="card-text">
-                        Customize and download invoices instantly without
-                        sacrificing your research time
+                        Instantly customize and download invoices that suit your research needs without delay.
                       </p>
                     </div>
                   </div>
