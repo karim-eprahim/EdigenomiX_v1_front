@@ -58,7 +58,9 @@
                 </div>
                 <div class="text-center">
                   <a
-                  @click="Order(price.price,price.edited_within,numberOfWords)"
+                    @click="
+                      Order(price.price, price.edited_within, numberOfWords)
+                    "
                     href="#"
                     class="btn text-white px-4 py-2 px-sm-3 py-sm-1 px-lg-5 py-lg-3 main-btn"
                     >Order Now</a
@@ -71,7 +73,10 @@
           <!-- OR  -->
           <!-- <h1 class="OR">OR</h1> -->
           <!-- set the number of words  -->
-          <div class="words-card bg-light shadow p-4 mt-3 rounded" style="display: none;">
+          <div
+            class="words-card bg-light shadow p-4 mt-3 rounded"
+            style="display: none"
+          >
             <form
               class="d-flex flex-column align-items-center justify-content-center"
               @submit.prevent="getPriceByWordNum"
@@ -126,7 +131,7 @@
                 </div>
                 <div class="text-center">
                   <a
-                  @click="Order(price.price,price.edited_within)"
+                    @click="Order(price.price, price.edited_within)"
                     href="#"
                     class="btn text-white px-4 py-2 px-sm-3 py-sm-1 px-lg-5 py-lg-3 main-btn"
                     >Upload & Order</a
@@ -221,6 +226,8 @@
 <script>
 import axios from "axios";
 import SwiperComments from "@/components/SwiperComments";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 export default {
   components: {
@@ -235,7 +242,7 @@ export default {
       wordNum: null,
       pricingPlansByFile: [],
       pricingPlansByWordsNum: [],
-      numberOfWords:null,
+      numberOfWords: null,
     };
   },
   mounted() {
@@ -252,15 +259,15 @@ export default {
     },
     // get the price by the file
     async getPriceByFile() {
-      if(this.selectedFile){
-        console.log(this.servId)
-      const formData = new FormData();
-      formData.append("file", this.selectedFile[0]); // file
-      // parameters
-      formData.append("service_id", this.servId);
-      formData.append("price_by", "file");
+      if (this.selectedFile) {
+        const loadingToastId = toast.loading("Uploading file...");
+        const formData = new FormData();
+        formData.append("file", this.selectedFile[0]); // file
+        // parameters
+        formData.append("service_id", this.servId);
+        formData.append("price_by", "file");
+
         try {
-          console.log(this.token);
           const result = await axios.post(
             `${process.env.VUE_APP_API_URL}/price-list`,
             formData,
@@ -272,60 +279,44 @@ export default {
               },
             }
           );
-  
+
           if (result.status === 200) {
-            // console.log("File uploaded successfully");
-            console.log(result.data.data);
             this.pricingPlansByFile = result.data.data.service.prices;
             this.numberOfWords = result.data.data.words_count;
-            // Additional handling if needed
+            toast.update(loadingToastId, {
+              render: "File uploaded successfully!",
+              type: "success",
+              isLoading: false,
+              autoClose: 1500,
+            });
           } else {
             console.error("File upload failed");
+            toast.update(loadingToastId, {
+              render: `Failed to upload file`,
+              type: "error",
+              isLoading: false,
+              autoClose: 1500,
+            });
           }
         } catch (error) {
           console.error("Error uploading file:", error);
+          let errorMessage = "Failed to upload file.";
+          toast.update(loadingToastId, {
+            render: errorMessage,
+            type: "error",
+            isLoading: false,
+            autoClose: 5000,
+          });
         }
-      }else{
-        console.log("please select the file");
+      } else {
+        toast.error("Please select a file to upload.", {
+          autoClose: 1500,
+        });
       }
-
     },
-    // get the price by the word count
-    // async getPriceByWordNum() {
-    //   const formData = new FormData();
-    //   // parameters
-    //   formData.append("service_id", this.servId);
-    //   formData.append("price_by", "words_number");
-    //   formData.append("words_number", this.wordNum);
 
-    //   try {
-    //     const result = await axios.post(
-    //       "http://localhost/EdigenomiX-v1/public/api/price-list",
-    //       formData,
-    //       {
-    //         headers: {
-    //           "Content-Type": "multipart/form-data",
-    //           Authorization: `Bearer ${this.token}`,
-    //           Accept: "application/json",
-    //         },
-    //       }
-    //     );
-
-    //     if (result.status === 200) {
-    //       console.log("File uploaded successfully");
-    //       console.log(result.data.data);
-    //       this.pricingPlansByWordsNum = result.data.data.service.prices;
-    //       // Additional handling if needed
-    //     } else {
-    //       console.error("File upload failed");
-    //     }
-    //   } catch (error) {
-    //     console.error("Error uploading file:", error);
-    //   }
-    // },
-
-    // do the order 
-    async Order(price,edited_within,words_count,orderDetails){
+    // do the order
+    async Order(price, edited_within, words_count) {
       const formData = new FormData();
       // parameters
       formData.append("service_id", this.servId);
@@ -346,9 +337,11 @@ export default {
         );
 
         if (result.status === 200) {
-          let job_id = result.data.data.job.id
-          console.log(orderDetails)
-          this.$router.push({ name: "CheckOut" ,params: { servId: this.servId ,jobId:job_id }});
+          let job_id = result.data.data.job.id;
+          this.$router.push({
+            name: "CheckOut",
+            params: { servId: this.servId, jobId: job_id },
+          });
           // Additional handling if needed
         } else {
           console.error("File upload failed");
@@ -356,7 +349,7 @@ export default {
       } catch (error) {
         console.error("Error uploading file:", error);
       }
-    }
+    },
   },
 };
 </script>

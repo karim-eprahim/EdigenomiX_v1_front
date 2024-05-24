@@ -11,6 +11,7 @@
                   :src="profileData.image"
                   alt="..."
                   width="130"
+                  height="130"
                   class="rounded mb-2 img-thumbnail"
                 /><router-link
                   :to="{ name: 'EditProfile' }"
@@ -41,13 +42,20 @@
                 >
               </li>
               <li class="list-inline-item text-center me-3">
-                <h5 class="font-weight-bold mb-0 d-block">15</h5>
+                <h5 class="font-weight-bold mb-0 d-block">
+                  {{ allJobs.filter((job) => job.status == "approved").length }}
+                </h5>
                 <small class="text-muted">
                   <i class="fas fa-user mr-1"></i>Completed</small
                 >
               </li>
               <li class="list-inline-item text-center me-3">
-                <h5 class="font-weight-bold mb-0 d-block">2</h5>
+                <h5 class="font-weight-bold mb-0 d-block">
+                  {{
+                    allJobs.length -
+                    allJobs.filter((job) => job.status == "approved").length
+                  }}
+                </h5>
                 <small class="text-muted">
                   <i class="fas fa-user mr-1"></i>In work</small
                 >
@@ -138,10 +146,21 @@
                         </p>
                       </td>
                       <td class="py-3 px-0 px-sm-2">
-                        <span class="badge bg-success">Completed</span>
-                        <p class="pt-2 m-0 text-purple pointer">
+                        <span
+                          class="badge"
+                          :class="
+                            job.status == 'Quoted'
+                              ? 'bg-primary'
+                              : job.status == 'In progress'
+                              ? 'bg-warning'
+                              : job.status == 'completed'
+                              ? 'bg-success'
+                              : 'bg-danger'
+                          "
+                          >{{ job.status }}</span
+                        >
+                        <p v-if="job.status == 'completed'" class="pt-2 m-0 text-purple pointer">
                           Download File
-
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -190,7 +209,7 @@
                                   class="modal-title fs-5"
                                   id="exampleModalLabel"
                                 >
-                                  feedback for this Job
+                                  Feedback for this Job
                                 </h1>
                                 <button
                                   type="button"
@@ -201,13 +220,13 @@
                               </div>
                               <!-- label body  -->
                               <div class="modal-body">
-                                <form @submit.prevent="submitComment">
+                                <form @submit.prevent="submitComment(job.id)">
                                   <div class="mb-3">
                                     <label>Rating:</label>
                                     <star-rating
                                       :star-size="25"
                                       :increment="0.5"
-                                      v-model="rating"
+                                      v-model:rating="rating"
                                     ></star-rating>
                                   </div>
                                   <div class="mb-3">
@@ -220,6 +239,7 @@
                                       class="form-control"
                                       id="message-text"
                                       style="min-height: 150px"
+                                      v-model="comment"
                                     ></textarea>
                                   </div>
                                 </form>
@@ -229,12 +249,14 @@
                                   type="button"
                                   class="btn btn-secondary rounded-pill"
                                   data-bs-dismiss="modal"
+                                  id="Close"
                                 >
                                   Close
                                 </button>
                                 <button
                                   type="button"
                                   class="btn btn-purple px-5 rounded-pill"
+                                  @click="submitComment(job.id)"
                                 >
                                   Submit
                                 </button>
@@ -281,6 +303,8 @@
 <script>
 import axios from "axios";
 import StarRating from "vue-star-rating";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 export default {
   name: "Profile",
@@ -311,42 +335,27 @@ export default {
     }
     this.profileDataInfo();
     this.jobList();
-    //.checkScreen
     this.checkScreen();
   },
   methods: {
-    // check the screan
     checkScreen() {
       this.windownWidth = window.innerWidth;
-      if (this.windownWidth <= 990) {
-        this.showDetailvalue = false;
-        console.log("small");
-      } else {
-        console.log("larg");
-        this.showDetailvalue = true;
-      }
+      this.showDetailvalue = this.windownWidth > 990;
     },
-    // Show details of table
     showDetail() {
       this.showDetailvalue = !this.showDetailvalue;
     },
-
-    // get the info about user
     async profileDataInfo() {
       try {
-        let result = await axios.get(
-          `${process.env.VUE_APP_API_URL}/profile`,
-          {
-            headers: {
-              Authorization: `Bearer ${this.token}`,
-              Accept: `application/json`,
-            },
-          }
-        );
+        let result = await axios.get(`${process.env.VUE_APP_API_URL}/profile`, {
+          headers: {
+            Authorization: `Bearer ${this.token}`,
+            Accept: `application/json`,
+          },
+        });
 
         if (result.status === 200) {
           this.profileData = result.data.data.user;
-          console.log(this.profileData);
         } else {
           console.log("User Not Found");
         }
@@ -355,12 +364,7 @@ export default {
         this.$router.push({ name: "Signin" });
       }
     },
-
-    // get the jobs
     async jobList() {
-      const formData = new FormData();
-      // parameters
-      formData.append("user_id", this.userId);
       try {
         const result = await axios.get(
           `${process.env.VUE_APP_API_URL}/job-list`,
@@ -376,10 +380,8 @@ export default {
         );
 
         if (result.status === 200) {
-          console.log("Get Jobs Don");
-          console.log(result.data.data);
-          console.log(result.data.data.jobs);
           this.allJobs = result.data.data.jobs.reverse();
+          console.log(this.allJobs);
         } else {
           console.error("Get Jobs failed");
         }
@@ -387,33 +389,43 @@ export default {
         console.error("Get Jobs Error:", error);
       }
     },
-
-    // for the user comment
-    async submitComment() {
+    async submitComment(jobId) {
       try {
-        const result = await axios.post("link", {
-          headers: {
-            Authorization: `Bearer ${this.token}`,
-            Accept: "application/json",
-          },
-          params: {
-            comment: this.comment,
-            rating: this.rating,
-          },
-        });
+        const formData = new FormData();
+        formData.append("job_id", jobId);
+        formData.append("comment", this.comment);
+        formData.append("rate", this.rating);
+
+        const result = await axios.post(
+          `${process.env.VUE_APP_API_URL}/job-review`,
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${this.token}`,
+              Accept: "application/json",
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+
         if (result.status === 200) {
-          console.log("Submitt successfully");
-          console.log(result.data.data);
-          this.comment = ""; // Clear the comment field after submission
-          this.rating = 0; // Reset the rating
+          document.getElementById("Close").click();
+          toast.success("comment Success", {
+            autoClose: 1000,
+          });
+          this.comment = "";
+          this.rating = 0;
         } else {
-          console.error("Error submitting comment");
+          toast.error("comment Success", {
+            autoClose: 1000,
+          });
         }
       } catch (error) {
-        console.error("Error submitting comment:", error);
+        toast.error("comment Success", {
+          autoClose: 1000,
+        });
       }
     },
-    // for the payment (payher)
     payher(servId, jobId) {
       this.$router.push({
         name: "CheckOut",
@@ -423,6 +435,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .profile.mr-3 {
   display: flex;
@@ -442,5 +455,4 @@ export default {
     font-size: 13px;
   }
 }
-
 </style>

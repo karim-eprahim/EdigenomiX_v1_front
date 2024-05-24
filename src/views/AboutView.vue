@@ -10,14 +10,26 @@
         <div class="col order-2 order-md-1">
           <div class="w-100">
             <p>
-              Welcome to EdigenomiX Scientific, where every project starts with a promise of discovery and ends with a stride towards groundbreaking science. Founded on the belief that every researcher deserves top-tier support, we have spent over a decade perfecting our craft in genomics research and academic publishing.
+              Welcome to EdigenomiX Scientific, where every project starts with
+              a promise of discovery and ends with a stride towards
+              groundbreaking science. Founded on the belief that every
+              researcher deserves top-tier support, we have spent over a decade
+              perfecting our craft in genomics research and academic publishing.
             </p>
             <p>
-              Our services range from detailed genomics analysis and bioinformatics to expert-level scientific and language editing, proofreading, and manuscript preparation. We ensure that each project not only meets but exceeds the highest academic standards.
+              Our services range from detailed genomics analysis and
+              bioinformatics to expert-level scientific and language editing,
+              proofreading, and manuscript preparation. We ensure that each
+              project not only meets but exceeds the highest academic standards.
             </p>
           </div>
           <div class="mt-3">
-            <button @click="this.$router.push({ name: 'Services' })" class="btn btn-purple d-block">See Our Services</button>
+            <button
+              @click="this.$router.push({ name: 'Services' })"
+              class="btn btn-purple d-block"
+            >
+              See Our Services
+            </button>
             <div
               class="row text-center rounded links-social d-inline-block pt-2 ms-1"
             >
@@ -88,6 +100,9 @@ import ContactUs from "@/components/ContactUs.vue";
 export default {
   name: "About",
   components: { team, ContactUs },
+//   mounted() {
+//     this.$toast("This is a toast notification!");
+// }
 };
 </script>
 <style scoped>

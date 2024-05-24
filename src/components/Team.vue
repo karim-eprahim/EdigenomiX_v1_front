@@ -141,7 +141,7 @@ export default {
       );
       if (result.status == 200) {
         this.allteam = result.data.data.editors;
-        console.log(this.allteam);
+        // console.log(this.allteam);
       }
     },
 

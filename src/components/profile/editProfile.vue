@@ -161,11 +161,9 @@ export default {
           );
 
           if (result.status === 200) {
-            // console.log(result.data);
             let user = {};
             user.token = this.token;
             user.user = result.data.data;
-            console.log(user);
             // Save to local storage
             localStorage.setItem("user-info", JSON.stringify(user));
             // Success: user found
@@ -191,8 +189,6 @@ export default {
       // Create a FormData object to send the file
       const formData = new FormData();
       formData.append("avatar", file);
-
-      console.log(formData);
       try {
         // Make the API call to change the avatar using axios.post
         let result = await axios.post(

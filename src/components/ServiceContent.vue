@@ -13,7 +13,7 @@
           :to="{ name: 'UploadFile', params: { servId: servId } }"
           class="btn btn-purple rounded-pill px-5"
         >
-        Get Quote
+          Get Quote
         </router-link>
       </div>
     </div>
@@ -28,13 +28,26 @@
             <h2 class="fs-3 text-start">{{ serviceData.en_name }}</h2>
           </div>
           <div class="w-100">
-            <p>
-              Our subject matter experts ensure that your manuscript is ready
-              for submission, by correcting errors in grammar, style, layout,
-              citations, formatting, references, and more.
+            <p v-for="servsub in serviceData.editing_service" class="mb-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="#6664cf"
+                class="bi bi-check-lg me-1"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"
+                />
+              </svg>
+              {{ servsub.name }}
             </p>
             <ul class="list-group text-decoration-none list-unstyled">
-              <li class="d-flex justify-content-start align-items-center gap-2" v-for="subTitle in serviceData.titles">
+              <li
+                class="d-flex justify-content-start align-items-center gap-2"
+                v-for="subTitle in serviceData.titles"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -47,39 +60,8 @@
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
                   />
                 </svg>
-                {{subTitle.en_name}}
+                {{ subTitle.en_name }}
               </li>
-              <!-- <li class="d-flex justify-content-start align-items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#ff7baf"
-                  class="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                  />
-                </svg>
-                Formatting of the manuscript for a journal of your choice
-              </li>
-              <li class="d-flex justify-content-start align-items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="#ff7baf"
-                  class="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
-                  />
-                </svg>
-
-                Your document will be checked by 2 experts
-              </li> -->
             </ul>
           </div>
           <div class="mt-3">
@@ -133,13 +115,12 @@
             }"
             class="pb-5 mt-4"
           >
-            <swiper-slide v-for="index in 6" :key="index">
+            <swiper-slide v-for="servInfo in serviceData.titles" :key="index">
               <div class="bg-white text-center p-3 py-4 rounded-5">
-                <h5 class="mb-3">Manuscript Finalization</h5>
+                <h5 class="mb-3">{{ servInfo.en_header }}</h5>
                 <p class="text-muted">
                   <i class="fas fa-quote-left pe-2"></i>
-                  Our editors will format your manuscript as per the guidelines
-                  of your target journal, for free.
+                  {{ servInfo.en_description }}
                 </p>
               </div>
             </swiper-slide>
@@ -167,28 +148,26 @@
           :breakpoints="breakpoints"
           class="pb-5"
         >
-          <swiper-slide v-for="index in 6" :key="index">
+          <swiper-slide v-for="review in serviceData.reviews">
             <div class="bg-white text-center p-3 rounded-5">
               <img
                 class="rounded-circle shadow-1-strong mb-4"
-                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                :src="review.client.image"
                 alt="avatar"
                 style="width: 100px"
               />
-              <h5 class="mb-3">Anna Deynah</h5>
+              <h5 class="mb-3">{{ review.client.name }}</h5>
               <star-rating
                 class="justify-content-center mb-2"
                 :star-size="25"
                 :increment="0.5"
-                rating="3.5"
+                :rating="review.rate"
                 :show-rating="false"
                 :read-only="true"
               ></star-rating>
               <p class="text-muted">
                 <i class="fas fa-quote-left pe-2"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-                eos id officiis hic tenetur quae quaerat ad velit ab hic
-                tenetur.
+                {{ review.comment }}
               </p>
               <ul
                 class="list-unstyled d-flex justify-content-center text-warning mb-0"
@@ -231,6 +210,7 @@ export default {
       token: "",
       servContent: "",
       servId: this.$route.params.servId,
+      result: [],
       // planId: this.$route.params.planId,
       reasons: {
         0: {
@@ -263,9 +243,6 @@ export default {
       serviceData: [],
     };
   },
-  mounted() {
-    this.serviceDetail();
-  },
   methods: {
     async serviceDetail() {
       let result = await axios.get(
@@ -274,18 +251,19 @@ export default {
       if (result.status == 200) {
         this.serviceData = result.data.data.services;
         console.log(this.serviceData);
-        console.log(this.serviceData.image)
       }
     },
   },
   computed: {
     backgroundStyle() {
-      console.log(this.serviceData.image)
       return {
         backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)), url(${require("@/assets/servcont/1585108236158.jpeg")})`,
         backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)),url(${this.serviceData.image})`,
       };
     },
+  },
+  mounted() {
+    this.serviceDetail();
   },
 };
 </script>

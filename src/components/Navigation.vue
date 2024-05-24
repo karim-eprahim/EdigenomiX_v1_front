@@ -304,6 +304,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "navigation",
   components: {},
@@ -336,14 +338,61 @@ export default {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },
-    // logout
-    logMeOut() {
-      localStorage.clear();
-      this.$router.push({ name: "Signin" });
+    async logMeOut() {
+      try {
+        const userInfo = localStorage.getItem("user-info");
+        if (!userInfo) {
+          throw new Error("User info not found in localStorage");
+        }
+
+        const token = JSON.parse(userInfo).token;
+        console.log(token);
+
+        let response = await axios.post(
+          `${process.env.VUE_APP_API_URL}/logout`,
+          {}, // Empty body
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        if (response.status === 200) {
+          localStorage.clear();
+          this.$router.push({ name: "Signin" });
+        } else {
+          console.error("Error logging out", response.status);
+        }
+      } catch (error) {
+        console.error("Logout error", error);
+      }
     },
   },
 };
 </script>
+
+<!-- try {
+  const result = await axios.post(
+    `${process.env.VUE_APP_API_URL}/price-list`,
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${this.token}`,
+        Accept: "application/json",
+      },
+    }
+  );
+
+  if (result.status === 200) {
+    this.pricingPlansByFile = result.data.data.service.prices;
+    this.numberOfWords = result.data.data.words_count;
+    // Additional handling if needed
+  } else {
+    console.error("File upload failed");
+  }
+}  -->
 
 <style lang="scss" scoped>
 .nav a.router-link-active.router-link-exact-active.btn {

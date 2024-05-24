@@ -136,7 +136,7 @@ export default {
           this.errorMessage = ""
           // save to localstorage
           localStorage.setItem("user-info", JSON.stringify(result.data.data));
-          // console.log(JSON.stringify(result.data));
+          console.log(JSON.stringify(result.data));
           // success signup and go to home bage
           this.$router.push({ name: "Profile" });
 

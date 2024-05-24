@@ -272,20 +272,20 @@
                       {{ course.students_number }} student
                     </div>
                   </div>
-                  <!-- modal  -->
+                  <!-- modal button  -->
                   <button
                     type="button"
                     class="btn btn-purple course-btn"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                    data-bs-target="#takenCourseModal"
                   >
                     Enroll Now
                   </button>
 
-                  <!-- Modal -->
+                  <!-- Modal drop -->
                   <div
                     class="modal fade"
-                    id="exampleModal"
+                    id="takenCourseModal"
                     tabindex="-1"
                     aria-labelledby="exampleModalLabel"
                     aria-hidden="true"
@@ -304,36 +304,83 @@
                           ></button>
                         </div>
                         <div class="modal-body">
-                          <p>
-                            The "Web Development Essentials" course will open on
-                            7/7/2022. Here are some important details:
-                          </p>
-                          <ul>
-                            <li>Learn HTML, CSS, and JavaScript</li>
-                            <li>Build responsive websites</li>
-                            <li>Create dynamic web applications</li>
-                            <li>
-                              Get hands-on experience with real-world projects
-                            </li>
-                            <li>
-                              Gain valuable skills for a career in web
-                              development
-                            </li>
-                          </ul>
-                          <p>
-                            Take this course to kickstart your journey in
-                            becoming a proficient web developer!
-                          </p>
+                          <!-- form  -->
+                          <form>
+                            <div class="mb-3">
+                              <label for="username" class="form-label"
+                                >Your Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="username"
+                                aria-describedby="user"
+                                v-model="name"
+                              />
+                              <div
+                                id="user"
+                                class="form-text text-danger"
+                                v-if="takenError.name"
+                              >
+                                {{ takenError.name[0] }}
+                              </div>
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="emailadress" class="form-label"
+                                >Email address</label
+                              >
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="emailadress"
+                                aria-describedby="email"
+                                v-model="email"
+                              />
+                              <div
+                                id="email"
+                                class="form-text text-danger"
+                                v-if="takenError.email"
+                              >
+                                {{ takenError.email[0] }}
+                              </div>
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="phone" class="form-label"
+                                >Phone Number</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="phone"
+                                aria-describedby="allo"
+                                v-model="phone"
+                              />
+                              <div
+                                id="allo"
+                                class="form-text text-danger"
+                                v-if="takenError.mobile"
+                              >
+                                {{ takenError.mobile[0] }}
+                              </div>
+                            </div>
+                          </form>
                         </div>
                         <div class="modal-footer">
                           <button
                             type="button"
                             class="btn btn-secondary"
+                            id="Close"
                             data-bs-dismiss="modal"
                           >
                             Close
                           </button>
-                          <button type="button" class="btn btn-purple">
+                          <button
+                            type="button"
+                            class="btn btn-purple"
+                            @click="takenCourse(course.id)"
+                          >
                             Taken Now
                           </button>
                         </div>
@@ -347,57 +394,64 @@
         </div>
       </div>
     </div>
-
-    <!-- top-institutions  -->
-    <!-- <div class="top-institutions grad">
-      <div class="container">
-        <div class="start py-5">
-          <div class="d-flex justify-content-between align-items-center">
-            <h2 class="display-5 fs-1 fw-bold text-light">
-              Online Course From 160 Top Institutions.
-            </h2>
-          </div>
-        </div>
-        <div class="w-100 video">
-          <video
-            controls
-            loop
-            poster="../assets/videos/video-image.jpg"
-            class="w-100 video-img"
-          >
-            <source
-              src="../assets/videos/videointro.mp4"
-              type="video/mp4"
-              class="w-100 h-100"
-            />
-          </video>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 export default {
   name: "Services",
   data() {
     return {
       allCourses: [],
+      // course taken
+      name: "",
+      email: "",
+      phone: null,
+      courseData: [],
+      takenError: [],
     };
   },
   mounted() {
-    this.allservices();
+    this.allCoursesData();
   },
   methods: {
-    async allservices() {
+    async allCoursesData() {
       let result = await axios.get(
         `${process.env.VUE_APP_API_URL}/courses-list`
       );
       if (result.status == 200) {
         this.allCourses = result.data.data.courses;
-        console.log(this.allCourses)
+        // console.log(this.allCourses);
       }
+    },
+    // course taken
+    async takenCourse(course_id) {
+      const formData = new FormData();
+      formData.append("name", this.name);
+      formData.append("email", this.email);
+      formData.append("mobile", this.phone);
+      formData.append("course_id", course_id);
+
+      await axios
+        .post(`${process.env.VUE_APP_API_URL}/register-course`, formData)
+        .then((res) => {
+          console.log(res.data.data);
+          this.courseData = res.data.data;
+          document.getElementById('Close').click();
+          toast.success("Taken Course Success", {
+            autoClose: 1000,
+          });
+        })
+        .catch((err) => {
+          console.log(err.response.data.error);
+          this.takenError = err.response.data.error;
+          toast.error("Taken Faild", {
+            autoClose: 1000,
+          });
+        });
     },
   },
 };
@@ -566,8 +620,8 @@ export default {
     min-width: 300px;
   }
   .intro .chip-1 {
-  top: 250px;
-  left: 0px;
-}
+    top: 250px;
+    left: 0px;
+  }
 }
 </style>

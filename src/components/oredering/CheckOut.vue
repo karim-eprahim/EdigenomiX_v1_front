@@ -185,11 +185,11 @@
                 <div class="p-3 bg-light rounded">
                   <div class="row mb-2">
                     <div class="col-4">File Name:</div>
-                    <div class="col-8">keyboard-shortcuts-windows.pdf</div>
+                    <div class="col-8">{{ jobDetail.file_name }}</div>
                   </div>
                   <div class="row mb-2">
                     <div class="col-4">Word Count:</div>
-                    <div class="col-8">249 Words</div>
+                    <div class="col-8">{{ jobDetail.words_count }}</div>
                   </div>
                   <div class="row">
                     <a class="btn text-purple">Have a Discount Code?</a>
@@ -198,15 +198,15 @@
                 <div class="p-3 bg-light rounded">
                   <div class="row mb-2">
                     <div class="col-4">Edited Within:</div>
-                    <div class="col-8">2 Days</div>
+                    <div class="col-8">{{ jobDetail.duration }} {{ jobDetail.duration_type }}</div>
                   </div>
                   <div class="row mb-2">
                     <div class="col-4">Delivery Date:</div>
-                    <div class="col-8">11:30 PM, 8 Mar 2024</div>
+                    <div class="col-8">{{ jobDetail.delivered_at }}</div>
                   </div>
                   <div class="row mb-2">
                     <div class="col-4">Quote:</div>
-                    <div class="col-8">$ 31</div>
+                    <div class="col-8">$ {{ jobDetail.quote }}</div>
                   </div>
                 </div>
               </div>
@@ -238,6 +238,7 @@ export default {
     } else {
       this.token = JSON.parse(userData).token;
     }
+    this.getJobDetails()
   },
   methods: {
     changeTab(tab) {
@@ -246,13 +247,9 @@ export default {
 
     // get job Details
     async getJobDetails() {
-      const formData = new FormData();
-      // parameters
-      formData.append("job_id", this.jobId);
       try {
-        const result = await axios.post(
-          `${process.env.VUE_APP_API_URL}/job-payment`,
-          formData,
+        const result = await axios.get(
+          `${process.env.VUE_APP_API_URL}/job/${this.jobId}`,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -262,14 +259,12 @@ export default {
         );
 
         if (result.status === 200) {
-          console.log("Payment Don");
-          console.log(result.data.data);
-          this.$router.push({ name: "Profile" });
+          this.jobDetail = result.data.data.job
         } else {
-          console.error("Payment failed");
+          console.error("error in geting details");
         }
       } catch (error) {
-        console.error("Payment Error:", error);
+        console.error("jobDetails Error:", error);
       }
     },
 
@@ -292,8 +287,6 @@ export default {
         );
 
         if (result.status === 200) {
-          console.log("Payment Don");
-          console.log(result.data.data);
           this.$router.push({ name: "Profile" });
         } else {
           console.error("Payment failed");
