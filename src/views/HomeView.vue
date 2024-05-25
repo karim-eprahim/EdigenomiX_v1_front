@@ -1628,7 +1628,7 @@
             >
               <div class="section-title text-center py-3">
                 <h2 class="fw-bold">
-                  Ready to start your publication journey with Editage? Get
+                  Ready to start your publication journey with Edigenomix ? Get
                   Quote
                 </h2>
                 <div
