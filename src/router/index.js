@@ -58,7 +58,6 @@ const routes = [
     path: "/servicecontent/service/:servId",
     name: "ServiceContent",
     component: ServiceContent,
-    props: true,
   },
   {
     path: "/service/uploadfile/:servId",

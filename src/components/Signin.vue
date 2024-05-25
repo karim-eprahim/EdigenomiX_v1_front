@@ -244,7 +244,6 @@ export default {
       await axios
         .post(`${process.env.VUE_APP_API_URL}/send-reset-email`, formData)
         .then((res) => {
-          console.log(res.data.data);
           this.courseData = res.data.data;
           document.getElementById("Close").click();
           toast.success("Taken Course Success", {

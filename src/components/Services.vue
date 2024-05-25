@@ -26,7 +26,7 @@
             class="nav-link rounded-pill"
           >
             <i class="fa fa-credit-card"></i>
-            {{ category.ar_description }}
+            {{ category.en_name }}
           </a>
         </li>
       </ul>
@@ -131,7 +131,6 @@ export default {
           return categorie.services;
         });
         this.isLoading = false;
-        console.log(this.allServicesData);
       }
     },
 
@@ -179,7 +178,7 @@ export default {
   .card {
     transition: 0.4s;
     .card-img-top {
-      max-height: 180px;
+      height: 180px;
     }
     .serv-item {
       min-height: 150px;

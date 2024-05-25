@@ -265,6 +265,71 @@
       <!-- team  -->
       <team></team>
 
+          <!-- news & events  -->
+    <div class="news bg-light" id="new">
+        <div class="container py-5">
+          <div class="py-5 container-fluid">
+            <div class="view d-flex justify-content-between align-items-center">
+              <h1 class="display-5 fs-1 fw-bold">
+                Looking for solutions tailored specifically to your needs
+              </h1>
+            </div>
+          </div>
+          <div class="row row-cols-md-1 row-cols-lg-2">
+            <div class="col-sm">
+              <div class="card mb-3">
+                <img src="../assets/banner/land/pexels-fauxels-3183150.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Teaching JavaScript Language</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img src="../assets/banner/land/pexels-freestockpro-2646033.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <p class="card-text"><small class="text-muted">Last updated 15 mins ago</small></p>
+                      <p class="card-text">turitor teaching javascript tacking the crisis worldwide</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img src="../assets/banner/land/pexels-goumbik-590016.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <p class="card-text"><small class="text-muted">Last updated 3 hour ago</small></p>
+                      <p class="card-text">turitor teaching javascript tacking the crisis worldwide</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-4">
+                    <img src="../assets/banner/land/pexels-shvetsa-4226115.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-8">
+                    <div class="card-body">
+                      <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+                      <p class="card-text">turitor teaching javascript tacking the crisis worldwide</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
       <!-- Get Offer  -->
       <div class="about bg-pearl text-light py-3">
         <div class="container">

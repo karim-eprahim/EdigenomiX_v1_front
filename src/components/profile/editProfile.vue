@@ -59,33 +59,6 @@
               }}</span>
             </div>
           </div>
-          <!-- <div class="form-group">
-            <label class="col-lg-3 control-label">Time Zone:</label>
-            <div class="col-lg-8">
-              <div class="ui-select">
-                <select id="user_time_zone" class="form-control">
-                  <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                  <option value="Alaska">(GMT-09:00) Alaska</option>
-                  <option value="Pacific Time (US &amp; Canada)">
-                    (GMT-08:00) Pacific Time (US &amp; Canada)
-                  </option>
-                  <option value="Arizona">(GMT-07:00) Arizona</option>
-                  <option value="Mountain Time (US &amp; Canada)">
-                    (GMT-07:00) Mountain Time (US &amp; Canada)
-                  </option>
-                  <option value="Central Time (US &amp; Canada)">
-                    (GMT-06:00) Central Time (US &amp; Canada)
-                  </option>
-                  <option value="Eastern Time (US &amp; Canada)">
-                    (GMT-05:00) Eastern Time (US &amp; Canada)
-                  </option>
-                  <option value="Indiana (East)">
-                    (GMT-05:00) Indiana (East)
-                  </option>
-                </select>
-              </div>
-            </div>
-          </div> -->
           <button
             type="button"
             @click="EditProfile()"
@@ -178,22 +151,15 @@ export default {
         console.log("Validation error");
       }
     },
-
-    // edit Avatar
-
-    // edit Avatar
     // edit Avatar
     async handleFileChange(event) {
       const file = event.target.files[0];
-
-      // Create a FormData object to send the file
       const formData = new FormData();
       formData.append("avatar", file);
       try {
-        // Make the API call to change the avatar using axios.post
         let result = await axios.post(
           `${process.env.VUE_APP_API_URL}/change-avatar`,
-          formData, // Include the FormData object as the second parameter
+          formData,
           {
             headers: {
               Authorization: `Bearer ${this.token}`,
@@ -204,57 +170,17 @@ export default {
 
         // Check the status of the response
         if (result.status === 200) {
-          // Handle the successful response, update component state, or perform other actions
           console.log("Avatar changed successfully", result.data);
         } else {
-          // Handle other status codes if needed
           console.error("Unexpected status code:", result.status);
         }
       } catch (error) {
-        // Log more details about the error
         console.error("Error changing avatar", error);
-
-        // Log the response data if available
         if (error.response) {
           console.error("Response data:", error.response.data);
         }
       }
     },
-
-//     handleFileChange(event) {
-//   const fileInput = event.target;
-//   if (fileInput.files.length > 0) {
-//     this.profilePhotoUrl = fileInput.files[0];
-//   } else {
-//     this.profilePhotoUrl = null;  // Reset to null if no file is selected
-//   }
-// },
-
-// async updateProfilePhoto() {
-//   try {
-//     if (!this.profilePhotoUrl) {
-//       console.error('No file selected for update');
-//       return;
-//     }
-
-//     const formData = new FormData();
-//     formData.append('avatar', this.profilePhotoUrl);
-
-//     const response = await axios.post('http://localhost/EdigenomiX-v1/public/api/change-avatar', formData, {
-//       headers: {
-//         Authorization: `Bearer ${this.token}`,
-//         "Content-Type": "multipart/form-data",
-//       },
-//     });
-
-//     // Handle the response as needed
-//     console.log(response.data);
-//   } catch (error) {
-//     // Handle errors
-//     console.error('Error updating profile photo', error);
-//   }
-// },
-
   },
 };
 </script>

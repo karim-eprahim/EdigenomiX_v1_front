@@ -346,7 +346,6 @@ export default {
         }
 
         const token = JSON.parse(userInfo).token;
-        console.log(token);
 
         let response = await axios.post(
           `${process.env.VUE_APP_API_URL}/logout`,

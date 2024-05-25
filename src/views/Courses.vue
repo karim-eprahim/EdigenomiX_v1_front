@@ -227,7 +227,7 @@
                     />
                   </div>
                   <div class="col text-end">
-                    <h3>{{ course.price }}</h3>
+                    <h3>{{ course.price }} $</h3>
                   </div>
                 </div>
                 <div class="card-body postion-relative mb-4">
@@ -438,7 +438,6 @@ export default {
       await axios
         .post(`${process.env.VUE_APP_API_URL}/register-course`, formData)
         .then((res) => {
-          console.log(res.data.data);
           this.courseData = res.data.data;
           document.getElementById('Close').click();
           toast.success("Taken Course Success", {
