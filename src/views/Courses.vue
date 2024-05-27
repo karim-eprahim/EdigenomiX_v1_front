@@ -9,13 +9,15 @@
               <h1
                 class="text-md-start px-3 px-md-0 text-center head-text fw-bold display-3 mt-0 mt-xl-4"
               >
-                Develop your skills in a new & unique way
+              Welcome to EdigenomiX Academy
               </h1>
+              <h3
+                class="text-md-start px-3 px-md-0 text-center fw-bold mt-0 mt-xl-4"
+              >
+              Elevate Your Research Journey with Us!
+                          </h3>
               <p class="text-md-start text-center headp">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
-                mollitia quidem fugiat eius hic? Assumenda voluptatum placeat
-                asperiores distinctio tempora commodi, a aliquam ipsam illo!
-                Autem iure reiciendis culpa aut.
+                At EdigenomiX Academy, we provide the ultimate training to master the art of clinical research and successfully publish your work in prestigious international medical journals.
               </p>
               <div class="action gap-5">
                 <div class="btn btn-purple rounded-pill px-4 me-3">
@@ -48,8 +50,8 @@
                   />
                 </svg>
                 <div class="text-center">
-                  <h6 class="m-0 fw-bold">50+</h6>
-                  <p class="m-0 fs-small">Online Courses</p>
+                  <h6 class="m-0 fw-bold">+</h6>
+                  <p class="m-0 fs-small">Register Now</p>
                 </div>
               </div>
               <div class="chip-2 shadow">
@@ -69,8 +71,8 @@
                   />
                 </svg>
                 <div class="text-center">
-                  <h6 class="m-0 fw-bold">UI Design Class</h6>
-                  <p class="m-0 fs-small">Build your Web Development</p>
+                  <h6 class="m-0 fw-bold">Biomedical Sciences</h6>
+                  <p class="m-0 fs-small">Join EdigenomiX Academy</p>
                   <button class="btn btn-sm mt-2 btn-purple">Join now</button>
                 </div>
               </div>

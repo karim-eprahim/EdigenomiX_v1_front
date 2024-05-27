@@ -55,22 +55,23 @@
                       <p class="card-text">{{ serv.en_description }}</p>
                       <!-- Additional service information can be displayed here -->
                       <p
-                        v-for="servsub in serv.titles"
-                        class="mb-1"
+                        v-for="servsub in serv.editing_service"
+                        class="mb-1 d-flex"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="22"
                           height="22"
                           fill="#6664cf"
-                          class="bi bi-check-lg me-1"
+                          class="bi bi-check-lg me-1 d-inline"
                           viewBox="0 0 16 16"
+                          style="min-width: 22px;"
                         >
                           <path
                             d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"
                           />
                         </svg>
-                        {{ servsub.en_name }}
+                        <p>{{ servsub.name }}</p>
                       </p>
                     </div>
                     <div class="mt-auto">
@@ -84,6 +85,7 @@
                         Read More ..
                       </router-link>
                       <router-link
+                      v-if="serv.is_activate !=0"
                         :to="{
                           name: 'UploadFile',
                           params: { servId: serv.id },
@@ -112,7 +114,7 @@ export default {
     return {
       allCategories: [],
       allServicesData: [],
-      activeTab: 1,
+      activeTab: 1 ,
       isLoading: false,
     };
   },
@@ -127,9 +129,11 @@ export default {
       );
       if (result.status == 200) {
         this.allCategories = result.data.data.categories;
+        this.activeTab = this.allCategories[0].id
         this.allServicesData = this.allCategories.map((categorie) => {
           return categorie.services;
         });
+        console.log(this.allServicesData);
         this.isLoading = false;
       }
     },

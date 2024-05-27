@@ -2,6 +2,7 @@
   <Navigation
     :loged="loged"
     :userInfo="userInfo"
+    :profilePhotoUrl="profilePhotoUrl"
     v-if="!nav"
     class="fixed-top"
   ></Navigation>
@@ -46,6 +47,7 @@ export default {
       if (userData) {
         this.loged = true;
         this.userInfo = JSON.parse(userData).user;
+        this.profilePhotoUrl = JSON.parse(localStorage.getItem("userAvatar"));
       } else {
         this.loged = false;
       }

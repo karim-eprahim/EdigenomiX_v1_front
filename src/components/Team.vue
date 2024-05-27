@@ -127,7 +127,7 @@ export default {
       );
       if (result.status == 200) {
         this.allteam = result.data.data.editors;
-        if(this.allteam[0]){
+        if(this.allteam.length >= 3){
           this.teamShow = true
         }else{
           this.teamShow = false

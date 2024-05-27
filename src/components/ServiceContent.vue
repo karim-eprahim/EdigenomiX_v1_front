@@ -9,7 +9,7 @@
         <p>
           {{ serviceData.en_description }}
         </p>
-        <router-link :to="{ name: 'UploadFile', params: { servId: servId } }" class="btn btn-purple rounded-pill px-5">
+        <router-link v-if="serviceData.is_activate !=0" :to="{ name: 'UploadFile', params: { servId: servId } }" class="btn btn-purple rounded-pill px-5">
           Get Quote
         </router-link>
       </div>
@@ -39,21 +39,18 @@
               {{ servsub }}
             </p> -->
             <ul class="list-group text-decoration-none list-unstyled">
-              <li class="d-flex justify-content-start align-items-center gap-2" v-for="subTitle in serviceData.titles">
+              <li class="d-flex justify-content-start align-items-center gap-2" v-for="subTitle in serviceData.editing_service">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff7baf"
                   class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                 </svg>
-                {{ subTitle.en_name }}
+                {{ subTitle.name }}
               </li>
             </ul>
           </div>
           <div class="mt-3">
-            <!-- <button class="btn btn-purple d-block rounded-pill px-4 py-2">
-              View Pricing and Order Now
-            </button> -->
-            <router-link :to="{ name: 'UploadFile', params: { servId: servId } }"
+            <router-link :to="{ name: 'UploadFile', params: { servId: servId } }" v-if="serviceData.is_activate !=0"
               class="btn btn-purple mx-sm-auto rounded-pill px-4 py-2" style="min-width: 250px">
               Order Now
             </router-link>
@@ -160,9 +157,6 @@ export default {
   },
   data() {
     return {
-      // imageUrl:'https://bubblecow.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbGtFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bac5323b0d90ba8711306e87daba33dd9fe43dcc/detailed-guide-to-developmental-editing-compressed.png',
-      imageUrl:
-        "https://blog.iamsuleiman.com/wp-content/uploads/2017/04/full-overlay-do-dont.png",
       modules: [Pagination, Navigation],
       reasonsmod: [Pagination, Navigation, Autoplay],
       token: "",
@@ -209,6 +203,7 @@ export default {
       );
       if (result.status == 200) {
         this.serviceData = result.data.data.services;
+        console.log(this.serviceData)
         if(this.serviceData.reviews[0]){
           this.reviewShow = true
         }else{

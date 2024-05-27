@@ -8,11 +8,9 @@
             <div class="media align-items-end d-flex gap-3">
               <div class="profile mr-3">
                 <img
-                  :src="profileData.image"
+                  :src="userAvatar"
                   alt="..."
-                  width="130"
-                  height="130"
-                  class="rounded mb-2 img-thumbnail"
+                  class="rounded mb-2 img-thumbnail avatar"
                 /><router-link
                   :to="{ name: 'EditProfile' }"
                   class="btn btn-purple btn-sm btn-block"
@@ -159,7 +157,7 @@
                           "
                           >{{ job.status }}</span
                         >
-                        <p v-if="job.status == 'completed'" class="pt-2 m-0 text-purple pointer">
+                        <a v-if="job.status == 'completed' && job.media[1].original_url " :href="job.media[1].original_url" class="pt-2 m-0 text-purple pointer">
                           Download File
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +171,7 @@
                               d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0"
                             />
                           </svg>
-                        </p>
+                        </a>
                       </td>
                       <td class="py-3 px-0 px-sm-2">
                         <!-- command modal  -->
@@ -313,6 +311,7 @@ export default {
   },
   data() {
     return {
+      userAvatar:"",
       profileData: [],
       allJobs: [],
       joblistNum: 5,
@@ -356,6 +355,7 @@ export default {
 
         if (result.status === 200) {
           this.profileData = result.data.data.user;
+          this.userAvatar = result.data.data.user.image;
         } else {
           console.log("User Not Found");
         }
@@ -437,6 +437,10 @@ export default {
 </script>
 
 <style scoped>
+.avatar {
+  width: 130px;
+  height: 130px;
+}
 .profile.mr-3 {
   display: flex;
   flex-direction: column;

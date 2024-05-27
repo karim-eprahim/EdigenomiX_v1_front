@@ -37,7 +37,7 @@
                 aria-expanded="false"
               >
                 <img
-                  :src="userInfo.image"
+                  :src="profilePhotoUrl"
                   class="rounded-circle profile-photo"
                   alt=""
                 />
@@ -312,6 +312,7 @@ export default {
   props: {
     loged: Boolean,
     userInfo: Object,
+    profilePhotoUrl: String,
   },
   data() {
     return {
@@ -370,28 +371,6 @@ export default {
   },
 };
 </script>
-
-<!-- try {
-  const result = await axios.post(
-    `${process.env.VUE_APP_API_URL}/price-list`,
-    formData,
-    {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Authorization: `Bearer ${this.token}`,
-        Accept: "application/json",
-      },
-    }
-  );
-
-  if (result.status === 200) {
-    this.pricingPlansByFile = result.data.data.service.prices;
-    this.numberOfWords = result.data.data.words_count;
-    // Additional handling if needed
-  } else {
-    console.error("File upload failed");
-  }
-}  -->
 
 <style lang="scss" scoped>
 .nav a.router-link-active.router-link-exact-active.btn {

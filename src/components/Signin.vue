@@ -224,7 +224,7 @@ export default {
             // console.log(result.data);
             // Save to local storage
             localStorage.setItem("user-info", JSON.stringify(result.data.data));
-            // Success: user found
+            localStorage.setItem("userAvatar", JSON.stringify(result.data.data.user.image));
             this.$router.push({ name: "Profile" });
           } else {
             this.userNotFoundErr = "User Not Found";

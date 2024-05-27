@@ -15,7 +15,7 @@
             type="file"
             class="form-control mx-auto"
             style="max-width: 300px"
-            @change="handleFileChange"
+            @change="changeProfilePhoto"
           />
         </div>
       </div>
@@ -76,6 +76,8 @@
 import useVuelidate from "@vuelidate/core";
 import { required, email, minLength } from "@vuelidate/validators";
 import axios from "axios";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 export default {
   name: "EditProfile",
@@ -106,7 +108,8 @@ export default {
       this.email = JSON.parse(userData).user.email;
       this.phone = JSON.parse(userData).user.phone;
       this.userId = JSON.parse(userData).user.id;
-      this.profilePhotoUrl = JSON.parse(userData).user.image;
+      // this.profilePhotoUrl = JSON.parse(userData).user.image;
+      this.profilePhotoUrl = JSON.parse(localStorage.getItem("userAvatar"));
     } else {
       this.redirectTo({ val: "Signin" });
     }
@@ -152,8 +155,9 @@ export default {
       }
     },
     // edit Avatar
-    async handleFileChange(event) {
+    async changeProfilePhoto(event) {
       const file = event.target.files[0];
+      const loadingToastId = toast.loading("Uploading photo...");
       const formData = new FormData();
       formData.append("avatar", file);
       try {
@@ -171,8 +175,21 @@ export default {
         // Check the status of the response
         if (result.status === 200) {
           console.log("Avatar changed successfully", result.data);
+          toast.update(loadingToastId, {
+              render: "Photo changed successfully",
+              type: "success",
+              isLoading: false,
+              autoClose: 1500,
+            });
+            localStorage.setItem("userAvatar", JSON.stringify(result.data.data.newAvatarUrl));
         } else {
           console.error("Unexpected status code:", result.status);
+          toast.update(loadingToastId, {
+              render: `Failed to upload photo`,
+              type: "error",
+              isLoading: false,
+              autoClose: 1500,
+            });
         }
       } catch (error) {
         console.error("Error changing avatar", error);

@@ -6,10 +6,12 @@
       </h2>
     </div>
     <Services></Services>
+    <!-- <UpcomingServices></UpcomingServices> -->
   </div>
 </template>
 <script>
 import Services from "@/components/Services.vue";
+// import UpcomingServices from "@/components/upcomingServices.vue";
 export default {
   name: "ServecesPage",
   components: { Services },
