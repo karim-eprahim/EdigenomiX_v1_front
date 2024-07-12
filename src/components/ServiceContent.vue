@@ -203,7 +203,7 @@ export default {
       );
       if (result.status == 200) {
         this.serviceData = result.data.data.services;
-        console.log(this.serviceData)
+        // console.log(this.serviceData)
         if(this.serviceData.reviews[0]){
           this.reviewShow = true
         }else{

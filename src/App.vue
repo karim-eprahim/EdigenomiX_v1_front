@@ -192,9 +192,34 @@ a {
   display: none;
 }
 
-// .swiper-pagination-bullet {
-//   width: 40px;
-//   height: 40px;
-//   background-color: red;
-// }
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading span {
+  visibility: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 </style>

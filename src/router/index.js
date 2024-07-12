@@ -11,6 +11,7 @@ import ContactView from "../views/ContactView.vue";
 import CheckOut from "../components/oredering/CheckOut.vue";
 import ServiceContent from "../components/ServiceContent.vue";
 import UploadFile from "../components/oredering/UploadFile.vue";
+import AuthenticationOrder from "../components/authenticationOrder.vue";
 import ErrorPage from "../views/ErrorPage.vue";
 
 const routes = [
@@ -63,6 +64,11 @@ const routes = [
     path: "/service/uploadfile/:servId",
     name: "UploadFile",
     component: UploadFile,
+  },
+  {
+    path: "/order",
+    name: "AuthenticationOrder",
+    component: AuthenticationOrder,
   },
   {
     path: "/contact",

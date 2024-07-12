@@ -5,7 +5,7 @@
       <div id="service-banner" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="../assets/banner/banner-b-peridot-academic-editing-services-1.webp" class="d-block w-100"
+            <img src="../assets/subject/mainsub.gif" class="d-block w-100"
               alt="" />
             <div class="carousel-caption">
               <h2 class="mb-3 fw-bold">
@@ -17,6 +17,19 @@
               </p>
             </div>
           </div>
+          <!-- <div class="carousel-item" data-bs-interval="10000">
+            <img src="../assets/banner/banner-b-peridot-academic-editing-services-1.webp" class="d-block w-100"
+              alt="" />
+            <div class="carousel-caption">
+              <h2 class="mb-3 fw-bold">
+                Increase your Acceptance Chances by 24%
+              </h2>
+              <p>
+                From soil to space, our team of subject experts help finalize
+                your manuscript to get published in high-impact journals
+              </p>
+            </div>
+          </div> -->
           <div class="carousel-item" data-bs-interval="2000">
             <img src="../assets/banner/banner-b-peridot-academic-editing-services-2.webp" class="d-block w-100"
               alt="" />
@@ -190,7 +203,7 @@
 
       <!-- news & events  -->
       <div class="container px-4 py-5">
-        <h2 class="pb-2 border-bottom text-center">Tailored Solutions for Universities, Corporations, and Institutions</h2>
+        <h2 class="pb-2 border-bottom text-center fw-bold">Tailored Solutions for Universities, Corporations, and Institutions</h2>
 
         <div class="row row-cols-1 row-cols-lg-2 align-items-md-center g-5 py-5">
           <div class="col d-flex flex-column align-items-start gap-2">

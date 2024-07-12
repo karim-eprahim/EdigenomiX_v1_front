@@ -165,7 +165,7 @@
               class="mx-3 d-flex flex-column justify-content-center align-items-center text-decoration-none"
             >
               <img
-                :src="userInfo.image"
+                :src="profilePhotoUrl"
                 class="rounded-circle profile-photo"
                 alt=""
                 style="width: 100px; height: 100px"

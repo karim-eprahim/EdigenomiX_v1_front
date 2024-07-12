@@ -174,7 +174,7 @@ export default {
 
         // Check the status of the response
         if (result.status === 200) {
-          console.log("Avatar changed successfully", result.data);
+          // console.log("Avatar changed successfully", result.data);
           toast.update(loadingToastId, {
               render: "Photo changed successfully",
               type: "success",

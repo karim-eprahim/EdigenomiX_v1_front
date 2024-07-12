@@ -41,7 +41,7 @@
               </li>
               <li class="list-inline-item text-center me-3">
                 <h5 class="font-weight-bold mb-0 d-block">
-                  {{ allJobs.filter((job) => job.status == "approved").length }}
+                  {{ allJobs.filter((job) => job.client_status == "Delivered").length }}
                 </h5>
                 <small class="text-muted">
                   <i class="fas fa-user mr-1"></i>Completed</small
@@ -61,7 +61,7 @@
               <li class="list-inline-item text-center me-3">
                 <h5 class="font-weight-bold mb-0 d-block">
                   {{
-                    allJobs.filter((job) => job.payment_status == "Not Paid")
+                    allJobs.filter((job) => job.payment_status != "Payment Confirmation")
                       .length
                   }}
                 </h5>
@@ -136,7 +136,7 @@
                       <td class="py-3 px-0 px-sm-2">
                         <p class="mb-1 mx-2">{{ job.payment_status }}</p>
                         <p
-                          v-if="job.payment_status != 'Paid'"
+                          v-if="job.payment_status == 'Price Set'"
                           @click="payher(job.service_id, job.id)"
                           class="m-0 btn btn-primary pay-her btn-sm rounded-pill"
                         >
@@ -147,17 +147,23 @@
                         <span
                           class="badge"
                           :class="
-                            job.status == 'Quoted'
-                              ? 'bg-primary'
-                              : job.status == 'In progress'
-                              ? 'bg-warning'
-                              : job.status == 'completed'
+                            job.client_status == 'Submitted'
+                              ? 'bg-purple'
+                              : job.client_status == 'Assigned'
+                              ? 'bg-Assigned'
+                              : job.client_status == 'In Progress'
+                              ? 'bg-Progress'
+                              : job.client_status == 'Under Review'
+                              ? 'bg-Review'
+                              : job.client_status == 'Approved'
+                              ? 'bg-Approved'
+                              : job.client_status == 'Delivered'
                               ? 'bg-success'
                               : 'bg-danger'
                           "
-                          >{{ job.status }}</span
+                          >{{ job.client_status }}</span
                         >
-                        <a v-if="job.status == 'completed' && job.media[1].original_url " :href="job.media[1].original_url" class="pt-2 m-0 text-purple pointer">
+                        <a v-if="job.client_status == 'Delivered'"  :href="job.media[1]?job.media[1].original_url:'#'" class="pt-2 m-0 text-purple pointer downfile">
                           Download File
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -381,7 +387,7 @@ export default {
 
         if (result.status === 200) {
           this.allJobs = result.data.data.jobs.reverse();
-          console.log(this.allJobs);
+          // console.log(this.allJobs);
         } else {
           console.error("Get Jobs failed");
         }
@@ -453,6 +459,25 @@ export default {
   background-color: #c6cef3 !important;
   color: black !important;
   font-size: 12px;
+}
+/* .bg-Submitted {
+  background-color: var(--light-purple) ;
+} */
+.bg-Assigned {
+  background-color: var(--light-purple) ;
+}
+.bg-Progress {
+  background-color: #ffec7f;
+}
+.bg-Review {
+  background-color: rgb(67, 164, 255);
+}
+.bg-Approved {
+  background-color: rgb(2, 196, 131);
+}
+.downfile {
+      display: block;
+    text-decoration: none;
 }
 @media (max-width: 787px) {
   table {
