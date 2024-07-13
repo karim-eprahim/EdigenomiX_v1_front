@@ -23,11 +23,11 @@
                   <i class="fa fa-paypal"></i> Paypal
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a @click="changeTab('bank')" :class="{ active: activeTab === 'bank' }" class="nav-link rounded-pill">
                   <i class="fa fa-university"></i> Bank Transfer
                 </a>
-              </li>
+              </li> -->
             </ul>
 
             <div class="tab-content">
@@ -155,7 +155,7 @@
                 </form>
               </div>
               <!-- bank  -->
-              <div v-show="activeTab === 'bank'" class="">
+              <!-- <div v-show="activeTab === 'bank'" class="">
                 <h6 class="bank-detail text-center mb-2">
                   Bank account details
                 </h6>
@@ -175,7 +175,7 @@
                   Your payment information will be kept safe and secure using
                   256-bit SSL encryption.
                 </p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

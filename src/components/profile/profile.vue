@@ -58,7 +58,7 @@
                   <i class="fas fa-user mr-1"></i>In work</small
                 >
               </li>
-              <li class="list-inline-item text-center me-3">
+              <!-- <li class="list-inline-item text-center me-3">
                 <h5 class="font-weight-bold mb-0 d-block">
                   {{
                     allJobs.filter((job) => job.payment_status != "Payment Confirmation")
@@ -68,7 +68,7 @@
                 <small class="text-muted">
                   <i class="fas fa-user mr-1"></i>Not Payed</small
                 >
-              </li>
+              </li> -->
               <!-- <li class="list-inline-item text-center me-3">
                 <h5 class="font-weight-bold mb-0 d-block">{{ allJobs.filter(job => job.payment_status == 'Paid').length }}</h5>
                 <small class="text-muted">
@@ -132,7 +132,8 @@
                       <td class="py-3 px-0 px-sm-2" v-if="showDetailvalue">
                         {{ job.created_at.slice(0, 10) }}
                       </td>
-                      <td class="py-3 px-0 px-sm-2">{{ job.quote }} $</td>
+                      <td class="py-3 px-0 px-sm-2" v-if="job.quote">{{ job.quote }} $</td>
+                      <td class="py-3 px-0 px-sm-2" v-else>Unavailable</td>
                       <td class="py-3 px-0 px-sm-2">
                         <p class="mb-1 mx-2">{{ job.payment_status }}</p>
                         <p

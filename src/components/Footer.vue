@@ -5,20 +5,20 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul class="links">
-          <li><router-link :to="{name:'Courses'}" >nglish Editing</router-link></li>
-          <li><router-link :to="{name:'Courses'}" >publication support</router-link></li>
-          <li><router-link :to="{name:'Courses'}" >academic translation</router-link></li>
-          <li><router-link :to="{name:'Courses'}" >statical analysis</router-link></li>
+          <li><router-link :to="{name:'Services'}" >nglish Editing</router-link></li>
+          <li><router-link :to="{name:'Services'}" >publication support</router-link></li>
+          <li><router-link :to="{name:'Services'}" >academic translation</router-link></li>
+          <li><router-link :to="{name:'Services'}" >statical analysis</router-link></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Courses</h4>
         <ul class="links">
-          <li><router-link :to="{name:'Services'}" >Biomedical Sciences</router-link></li>
-          <li><router-link :to="{name:'Services'}" >Bioinformatics</router-link></li>
-          <li><router-link :to="{name:'Services'}" >Biostatistics</router-link></li>
-          <li><router-link :to="{name:'Services'}" >Scientific Research</router-link></li>
+          <li><router-link :to="{name:'Courses'}">Biomedical Sciences</router-link></li>
+          <li><router-link :to="{name:'Courses'}">Bioinformatics</router-link></li>
+          <li><router-link :to="{name:'Courses'}">Biostatistics</router-link></li>
+          <li><router-link :to="{name:'Courses'}">Scientific Research</router-link></li>
         </ul>
       </div>
 
