@@ -58,23 +58,6 @@
                   <i class="fas fa-user mr-1"></i>In work</small
                 >
               </li>
-              <!-- <li class="list-inline-item text-center me-3">
-                <h5 class="font-weight-bold mb-0 d-block">
-                  {{
-                    allJobs.filter((job) => job.payment_status != "Payment Confirmation")
-                      .length
-                  }}
-                </h5>
-                <small class="text-muted">
-                  <i class="fas fa-user mr-1"></i>Not Payed</small
-                >
-              </li> -->
-              <!-- <li class="list-inline-item text-center me-3">
-                <h5 class="font-weight-bold mb-0 d-block">{{ allJobs.filter(job => job.payment_status == 'Paid').length }}</h5>
-                <small class="text-muted">
-                  <i class="fas fa-user mr-1"></i>Payed</small
-                >
-              </li> -->
             </ul>
             <a
               @click="this.$router.push({ name: 'Services' })"
@@ -137,7 +120,7 @@
                       <td class="py-3 px-0 px-sm-2">
                         <p class="mb-1 mx-2">{{ job.payment_status }}</p>
                         <p
-                          v-if="job.payment_status == 'Price Set'"
+                          v-if="job.payment_status == 'price set'"
                           @click="payher(job.service_id, job.id)"
                           class="m-0 btn btn-primary pay-her btn-sm rounded-pill"
                         >
@@ -274,7 +257,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <div class="pt-3 pb-5 text-center">
+                <div class="pt-3 pb-5 text-center"  v-if="joblistNum != allJobs.length">
                   <a
                     class="btn d-inline-flex align-items-center mx-auto text-decoration-none text-primary"
                     style="max-width: max-content"
@@ -388,7 +371,8 @@ export default {
 
         if (result.status === 200) {
           this.allJobs = result.data.data.jobs.reverse();
-          // console.log(this.allJobs);
+          console.log(this.allJobs);
+
         } else {
           console.error("Get Jobs failed");
         }
@@ -428,7 +412,7 @@ export default {
           });
         }
       } catch (error) {
-        toast.error("comment Success", {
+        toast.error("comment Faild", {
           autoClose: 1000,
         });
       }

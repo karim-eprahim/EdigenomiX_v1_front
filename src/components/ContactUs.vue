@@ -48,10 +48,11 @@
           </div>
 
           <div class="col">
-            <iframe
+            <!-- <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220002.71832082162!2d32.13836365!3d30.5056962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f842bd43819d99%3A0x8465b12c9ff3a917!2z2KPYqNmIINi12YjZitix2Iwg2YXYrdin2YHYuNipINin2YTYpdiz2YXYp9i52YrZhNmK2Kk!5e0!3m2!1sar!2seg!4v1708610234238!5m2!1sar!2seg"
               style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              class="w-100 h-100 rounded-5"></iframe>
+              class="w-100 h-100 rounded-5"></iframe> -->
+              <img class="w-100 h-100 rounded" src="@/assets/about/contact.png" alt="">
           </div>
         </div>
         <div class="company-info bg-white py-4 rounded-4 mt-4">
@@ -64,7 +65,7 @@
                 </svg>
               </i>
               <h4>Location</h4>
-              <p>ismailia, abo-sour</p>
+              <p>Cairo, Cairo, Egypt</p>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center">
               <i>

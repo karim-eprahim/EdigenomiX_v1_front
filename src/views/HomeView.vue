@@ -5,15 +5,14 @@
       <div id="service-banner" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="../assets/subject/mainsub.gif" class="d-block w-100"
+            <img src="../assets/banner/intro.gif" class="d-block w-100"
               alt="" />
             <div class="carousel-caption">
               <h2 class="mb-3 fw-bold">
-                Increase your Acceptance Chances by 24%
+                Everything a Researcher Needs, All in One Place!
               </h2>
               <p>
-                From soil to space, our team of subject experts help finalize
-                your manuscript to get published in high-impact journals
+                Order your first service
               </p>
             </div>
           </div>
@@ -38,7 +37,7 @@
                 Trusted by Leading Publishers, Societies, Universities and Labs
               </h2>
               <p>
-                4 of the top 5 global publishers choose Editage as their author
+                4 of the top 5 global publishers choose EdigenomiX as their author
                 services partner
               </p>
             </div>
@@ -135,29 +134,29 @@
             </p>
           </div>
           <div class="row">
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-4">
               <div class="mx-2 p-3 about-info text-white text-center rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                   class="bi bi-file-earmark-fill" viewBox="0 0 16 16">
                   <path
                     d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2z" />
                 </svg>
-                <h4>{{ ourInfo.jobs }}</h4>
+                <h4>+ {{ projects }}</h4>
                 <p>Projects</p>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-4">
               <div class="mx-2 p-3 about-info text-white text-center rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                   class="bi bi-people-fill" viewBox="0 0 16 16">
                   <path
                     d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
                 </svg>
-                <h4>{{ ourInfo.clients }}</h4>
+                <h4>+ {{ Clients }}</h4>
                 <p>Happy Clients</p>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-4">
               <div class="mx-2 p-3 about-info text-white text-center rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                   class="bi bi-file-earmark-post" viewBox="0 0 16 16">
@@ -166,11 +165,11 @@
                   <path
                     d="M4 6.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 0 1H4.5a.5.5 0 0 1-.5-.5" />
                 </svg>
-                <h4>{{ ourInfo.editors }}</h4>
+                <h4>+ {{ Editors }}</h4>
                 <p>Editors</p>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <!-- <div class="col-6 col-md-3">
               <div class="mx-2 p-3 about-info text-white text-center rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                   class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -178,10 +177,10 @@
                   <path fill-rule="evenodd"
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg>
-                <h4>{{ ourInfo.employees }}</h4>
+                <h4>+ {{ Employees }}</h4>
                 <p>Employees</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -1353,6 +1352,10 @@ export default {
   data() {
     return {
       ourInfo: {},
+      projects: null,
+      Clients: null,
+      Editors: null,
+      Employees: null,
       modules: [Pagination, Navigation],
       breakpoints: {
         0: {
@@ -1380,6 +1383,10 @@ export default {
       );
       if (result.status == 200) {
         this.ourInfo = result.data.data
+        this.projects = result.data.data.jobs + 4000
+        this.Clients = result.data.data.clients + 1000
+        this.Editors = result.data.data.editors + 80
+        this.Employees = result.data.data.employees + 100
       }
     },
   }

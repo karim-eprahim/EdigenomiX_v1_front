@@ -1,9 +1,11 @@
 <template>
   <div class="ServiceContent pageh">
     <!-- about service  -->
-    <div class="service-header" :style="backgroundStyle">
-      <div class="mx-4 mx-sm-5 text-white imgcont">
-        <h3 class="fw-bold">
+    <div class="service-header">
+      <img class="servImage" :src="serviceData.image" alt="">
+      <div class="text-white imgcont">
+        <div class="mx-4 mx-sm-5 servtitle">
+          <h3 class="fw-bold">
           {{ serviceData.en_name }}
         </h3>
         <p>
@@ -12,15 +14,15 @@
         <router-link v-if="serviceData.is_activate !=0" :to="{ name: 'UploadFile', params: { servId: servId } }" class="btn btn-purple rounded-pill px-5">
           Get Quote
         </router-link>
+        </div>
       </div>
     </div>
-
     <!-- about service  -->
     <div class="container pt-3 pb-4">
       <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center">
         <div class="col order-2 order-md-1">
           <div class="container-fluid py-4">
-            <h2 class="fs-3 text-start">{{ serviceData.en_name }}</h2>
+            <h2 class="fs-3 text-start fw-bold">{{ serviceData.en_name }}</h2>
           </div>
           <div class="w-100">
             <!-- <p v-for="servsub in serviceData.editing_service" class="mb-1">
@@ -39,13 +41,13 @@
               {{ servsub }}
             </p> -->
             <ul class="list-group text-decoration-none list-unstyled">
-              <li class="d-flex justify-content-start align-items-center gap-2" v-for="subTitle in serviceData.editing_service">
+              <li class="d-flex justify-content-start gap-2" v-for="subTitle in serviceData.editing_service">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff7baf"
-                  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  class="bi bi-check-circle-fill" viewBox="0 0 16 16" style="min-width:25px;min-height: 25px;margin-top:0.3rem;">
                   <path
                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                 </svg>
-                {{ subTitle.name }}
+                <p class="fs-5">{{ subTitle.name }}</p>
               </li>
             </ul>
           </div>
@@ -204,6 +206,7 @@ export default {
       if (result.status == 200) {
         this.serviceData = result.data.data.services;
         // console.log(this.serviceData)
+        // console.log(this.serviceData.image);
         if(this.serviceData.reviews[0]){
           this.reviewShow = true
         }else{
@@ -214,30 +217,43 @@ export default {
   },
   computed: {
     backgroundStyle() {
+    console.log("image",this.serviceData.image)
       return {
-        backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)), url(${require("@/assets/servcont/1585108236158.jpeg")})`,
+        // backgroundImage: `linear-gradient(0deg, rgb(169 132 138 / 40%), rgb(0 0 0 / 40%)), url(${require("@/assets/servcont/1585108236158.jpeg")})`,
+        // backgroundImage: `linear-gradient(0deg, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${this.serviceData.image?this.serviceData.image:require("@/assets/servcont/1585108236158.jpeg")})`,
         backgroundImage: `linear-gradient(0deg, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${this.serviceData.image})`,
       };
     },
   },
-  mounted() {
+  beforeMount() {
     this.serviceDetail();
-  },
+  }
 };
 </script>
 <style scoped>
 .service-header {
-  min-height: 400px;
-  background-size: cover;
+  min-height: 300px;
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%));
+  position: relative;
+}
+.servImage{
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%));
+}
+.service-header .imgcont {
+  position:absolute;
+  top: 0;
+  width:100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%));
   display: flex;
-  justify-content: start;
   align-items: center;
 }
-
-.service-header .imgcont {
-  max-width: 44rem;
+.servtitle{
+  max-width: 600px;
 }
-
 .video {
   max-width: 660px;
 }
@@ -284,5 +300,16 @@ export default {
     gap: 0.8rem;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+}
+@media (min-width: 787px) {
+  .servImage{
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+
+}
+.service-header .imgcont {
+  max-height: 400px;
+}
 }
 </style>

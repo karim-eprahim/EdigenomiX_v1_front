@@ -194,7 +194,7 @@
                     <div class="col-4">Job Status:</div>
                     <div class="col-8">{{ jobDetail.client_status }}</div>
                   </div>
-                  <div class="row">
+                  <div class="row d-none">
                     <a class="btn text-purple">Have a Discount Code?</a>
                   </div>
                 </div>

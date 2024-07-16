@@ -5,7 +5,7 @@
       <div class="footer-col">
         <h4>Services</h4>
         <ul class="links">
-          <li><router-link :to="{name:'Services'}" >nglish Editing</router-link></li>
+          <li><router-link :to="{name:'Services'}" >English Editing</router-link></li>
           <li><router-link :to="{name:'Services'}" >publication support</router-link></li>
           <li><router-link :to="{name:'Services'}" >academic translation</router-link></li>
           <li><router-link :to="{name:'Services'}" >statical analysis</router-link></li>
@@ -35,7 +35,7 @@
           <button type="submit">SUBSCRIBE</button>
         </form>
         <div class="icons">
-          <a
+          <a href="https://www.facebook.com/profile.php?id=61562454945145"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
